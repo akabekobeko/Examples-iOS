@@ -1,0 +1,14 @@
+### Mac OS X ###
+.DS_Store
+ 
+### XCode ###
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+ 
+*.pbxuser
+*.perspective
+*.perspectivev3
+*.mode1v3
+*.mode2v3
+ 
+UserInterfaceState.xcuserstate
