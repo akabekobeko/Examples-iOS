@@ -1,19 +1,22 @@
 //
-//  MenuViewController.m
+//  AssetGroupViewController.m
 //  GridView
 //
 //  Created by Akabeko on 2012/09/09.
 //  Copyright (c) 2012年 Akabeko. All rights reserved.
 //
 
-#import "MenuViewController.h"
 #import "AssetGroupViewController.h"
+#import <AssetsLibrary/AssetsLibrary.h>
 
-@interface MenuViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface AssetGroupViewController () <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, retain) ALAssetsLibrary* assetLibrary; //! AssetsLibrary
+@property (nonatomic, retain) NSMutableArray*  groups;       //! AssetsLibrary 内のグループ情報コレクション
 
 @end
 
-@implementation MenuViewController
+@implementation AssetGroupViewController
 
 #pragma mark - Lifecycle
 
@@ -22,7 +25,9 @@
  */
 - (void)dealloc
 {
-	[_menuTableView release];
+	[_groupTableView release];
+	[_groups         release];
+	[_assetLibrary   release];
 
 	[super dealloc];
 }
@@ -36,9 +41,15 @@
 {
 	[super viewDidLoad];
 	
-	self.title                    = @"GridView Test Menu";
-	self.menuTableView.dataSource = self;
-	self.menuTableView.delegate   = self;
+	self.title                     = @"Select Group";
+	self.groupTableView.dataSource = self;
+	self.groupTableView.delegate   = self;
+
+	self.assetLibrary = [[[ALAssetsLibrary alloc] init] autorelease];
+	self.groups       = [[[NSMutableArray alloc] init] autorelease];
+
+	// グループ一覧の列挙を非同期に実行
+	[self performSelectorInBackground:@selector(enumGroups) withObject:nil];
 }
 
 /**
@@ -46,7 +57,10 @@
  */
 - (void)viewDidUnload
 {
-	[self setMenuTableView:nil];
+	[self setGroupTableView:nil];
+	[self setGroups:nil];
+	[self setAssetLibrary:nil];
+
 	[super viewDidUnload];
 }
 
@@ -86,7 +100,7 @@
  */
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	return 2;
+	return self.groups.count;
 }
 
 /**
@@ -105,16 +119,13 @@
 	{
 		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
 	}
-
+	
+	ALAssetsGroup* group = [self.groups objectAtIndex:indexPath.row];
+	NSString*      name  = [group valueForProperty:ALAssetsGroupPropertyName];
+	
+	cell.imageView.image = [UIImage imageWithCGImage:[group posterImage]];
+	cell.textLabel.text  = [NSString stringWithFormat:@"%@ (%d)", name, group.numberOfAssets];
 	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-	switch( indexPath.row )
-	{
-	case 0: cell.textLabel.text = @"UIView";        break;
-	case 1: cell.textLabel.text = @"Original Cell"; break;
-			
-	default:
-		break;
-	}
 	
 	return cell;
 }
@@ -129,13 +140,39 @@
  */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	AssetGroupViewController* controller = [[[AssetGroupViewController alloc] initWithNibName:@"AssetGroupViewController" bundle:nil] autorelease];
-	controller.testMode = ( indexPath.row == 0 ? TestModeUIIMageView : TestModeOriginalCell );
+}
 
-	UIBarButtonItem* back = [[[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil] autorelease];
-	self.navigationItem.backBarButtonItem = back;
+#pragma mark - Private
+
+/**
+ * AssetsLibrary 内のグループを列挙します。
+ */
+- (void)enumGroups
+{
+	// グループ列挙
+	void (^groupBlock)( ALAssetsGroup*, BOOL* ) = ^( ALAssetsGroup* group, BOOL* stop )
+	{
+		if( group == nil ) { return; }
+		
+		[self.groups addObject:group];
+		[self performSelectorOnMainThread:@selector( reloadGroup ) withObject:nil waitUntilDone:NO];
+	};
+
+	// エラー
+	void (^failureBlock)( NSError* ) = ^( NSError* error )
+	{
+		NSLog( @"Group enumurate error: %@", error );
+	};
 	
-	[self.navigationController pushViewController:controller animated:YES];
+	[self.assetLibrary enumerateGroupsWithTypes:ALAssetsGroupAll usingBlock:groupBlock failureBlock:failureBlock];
+}
+
+/**
+ * グループ一覧を更新します。
+ */
+- (void)reloadGroup
+{
+	[self.groupTableView reloadData];
 }
 
 @end

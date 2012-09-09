@@ -16,6 +16,10 @@
 		1683F44115FCA08D00042387 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1683F44015FCA08D00042387 /* ImageIO.framework */; };
 		16D5CD6A15FCA3D600BF672B /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D5CD6815FCA3D600BF672B /* MenuViewController.m */; };
 		16D5CD6B15FCA3D600BF672B /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16D5CD6915FCA3D600BF672B /* MenuViewController.xib */; };
+		16D5CD6F15FCA87400BF672B /* AssetGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D5CD6D15FCA87400BF672B /* AssetGroupViewController.m */; };
+		16D5CD7015FCA87400BF672B /* AssetGroupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16D5CD6E15FCA87400BF672B /* AssetGroupViewController.xib */; };
+		16D5CD7415FCA91300BF672B /* GridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D5CD7315FCA91300BF672B /* GridView.m */; };
+		16D5CD7615FCAA4B00BF672B /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D5CD7515FCAA4B00BF672B /* AssetsLibrary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,12 @@
 		16D5CD6715FCA3D600BF672B /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		16D5CD6815FCA3D600BF672B /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		16D5CD6915FCA3D600BF672B /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		16D5CD6C15FCA87400BF672B /* AssetGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetGroupViewController.h; sourceTree = "<group>"; };
+		16D5CD6D15FCA87400BF672B /* AssetGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetGroupViewController.m; sourceTree = "<group>"; };
+		16D5CD6E15FCA87400BF672B /* AssetGroupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssetGroupViewController.xib; sourceTree = "<group>"; };
+		16D5CD7215FCA91300BF672B /* GridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridView.h; sourceTree = "<group>"; };
+		16D5CD7315FCA91300BF672B /* GridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridView.m; sourceTree = "<group>"; };
+		16D5CD7515FCAA4B00BF672B /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16D5CD7615FCAA4B00BF672B /* AssetsLibrary.framework in Frameworks */,
 				1683F44115FCA08D00042387 /* ImageIO.framework in Frameworks */,
 				1683F42215FC17CC00042387 /* UIKit.framework in Frameworks */,
 				1683F42415FC17CC00042387 /* Foundation.framework in Frameworks */,
@@ -70,6 +81,7 @@
 		1683F42015FC17CC00042387 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				16D5CD7515FCAA4B00BF672B /* AssetsLibrary.framework */,
 				1683F42515FC17CC00042387 /* CoreGraphics.framework */,
 				1683F42315FC17CC00042387 /* Foundation.framework */,
 				1683F44015FCA08D00042387 /* ImageIO.framework */,
@@ -83,7 +95,7 @@
 			children = (
 				1683F43015FC17CC00042387 /* AppDelegate.h */,
 				1683F43115FC17CC00042387 /* AppDelegate.m */,
-				1683F43E15FC182200042387 /* Models */,
+				16D5CD7115FCA88800BF672B /* Controls */,
 				1683F43F15FC182F00042387 /* Views & Controllers */,
 				1683F42815FC17CC00042387 /* Supporting Files */,
 			);
@@ -101,21 +113,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1683F43E15FC182200042387 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
 		1683F43F15FC182F00042387 /* Views & Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				16D5CD6715FCA3D600BF672B /* MenuViewController.h */,
 				16D5CD6815FCA3D600BF672B /* MenuViewController.m */,
 				16D5CD6915FCA3D600BF672B /* MenuViewController.xib */,
+				16D5CD6C15FCA87400BF672B /* AssetGroupViewController.h */,
+				16D5CD6D15FCA87400BF672B /* AssetGroupViewController.m */,
+				16D5CD6E15FCA87400BF672B /* AssetGroupViewController.xib */,
 			);
 			name = "Views & Controllers";
+			sourceTree = "<group>";
+		};
+		16D5CD7115FCA88800BF672B /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				16D5CD7215FCA91300BF672B /* GridView.h */,
+				16D5CD7315FCA91300BF672B /* GridView.m */,
+			);
+			name = Controls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +188,7 @@
 			files = (
 				1683F42C15FC17CC00042387 /* InfoPlist.strings in Resources */,
 				16D5CD6B15FCA3D600BF672B /* MenuViewController.xib in Resources */,
+				16D5CD7015FCA87400BF672B /* AssetGroupViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +202,8 @@
 				1683F42E15FC17CC00042387 /* main.m in Sources */,
 				1683F43215FC17CC00042387 /* AppDelegate.m in Sources */,
 				16D5CD6A15FCA3D600BF672B /* MenuViewController.m in Sources */,
+				16D5CD6F15FCA87400BF672B /* AssetGroupViewController.m in Sources */,
+				16D5CD7415FCA91300BF672B /* GridView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
