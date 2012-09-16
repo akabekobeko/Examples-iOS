@@ -1,5 +1,11 @@
 //
-//  Copyright 2011 Andrey Tarantsov. Distributed under the MIT license.
+//  ABGridView.m
+//  GridView
+//
+//  Created by Akabeko on 2012/09/09.
+//  Copyright (c) 2012 Akabeko. All rights reserved. Distributed under the MIT license.
+//
+//  Original author: Andrey Tarantsov, ATArrayView https://github.com/andreyvit/SoloComponents-iOS/tree/master/ATArrayView
 //
 
 #import "ABGridView.h"
@@ -184,7 +190,25 @@
 {
     item.tag   = index;
     item.frame = [self rectForItemAtIndex:index];
+
+    if( [_delegate respondsToSelector:@selector(gridView:didSelectItemInGridView:)] )
+    {
+        // UIImageView などがアイテムでもタップ検出するため、常にユーザー操作を許可する
+        item.userInteractionEnabled = YES;
+		item.gestureRecognizers     = [NSArray arrayWithObjects:[[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapItem:)] autorelease], nil];
+    }
+    
     [item setNeedsDisplay]; // just in case
+}
+
+/**
+ * アイテムがタップされた時に発生します。
+ *
+ * @param gestureRecognizer ジェスチャー情報。
+ */
+- (void)tapItem:(UIGestureRecognizer *)gestureRecognizer
+{
+	[_delegate gridView:self didSelectItemInGridView:gestureRecognizer.view];
 }
 
 #pragma mark - Layouting

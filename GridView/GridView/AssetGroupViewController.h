@@ -18,6 +18,6 @@
 @interface AssetGroupViewController : UIViewController
 
 @property (nonatomic, retain) IBOutlet UITableView* groupTableView;    //! グループ一覧
-@property (nonatomic, assign) BOOL                  isTestModeUIImage; //! テスト方法が UIImage であることを示す値
+@property (nonatomic, assign) BOOL                  isViewModeUIImage; //! 表示モードが UIImage であることを示す値
 
 @end

@@ -17,7 +17,7 @@
 @interface AssetContentViewController : UIViewController
 
 @property (nonatomic, retain) IBOutlet ABGridView* assetGridView;     //! グリッド表示
-@property (nonatomic, retain) ALAssetsGroup*     group;             //! ALAssetsLibrary におけるグループ
-@property (nonatomic, assign) BOOL               isTestModeUIImage; //! テスト方法が UIImage であることを示す値
+@property (nonatomic, retain) ALAssetsGroup*       group;             //! ALAssetsLibrary におけるグループ
+@property (nonatomic, assign) BOOL                 isViewModeUIImage; //! 表示モードが UIImage であることを示す値
 
 @end

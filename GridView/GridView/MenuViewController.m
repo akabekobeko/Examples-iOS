@@ -109,7 +109,7 @@
 	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	switch( indexPath.row )
 	{
-	case 0: cell.textLabel.text = @"UIView";        break;
+	case 0: cell.textLabel.text = @"UIImageView";   break;
 	case 1: cell.textLabel.text = @"Original Cell"; break;
 			
 	default:
@@ -134,7 +134,7 @@
 	self.navigationItem.backBarButtonItem = back;
 
 	AssetGroupViewController* controller = [[[AssetGroupViewController alloc] initWithNibName:@"AssetGroupViewController" bundle:nil] autorelease];
-	controller.isTestModeUIImage = ( indexPath.row == 0 );
+	controller.isViewModeUIImage = ( indexPath.row == 0 );
 
 	[self.navigationController pushViewController:controller animated:YES];
 }

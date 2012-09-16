@@ -147,7 +147,7 @@
 	
 	AssetContentViewController* controller = [[[AssetContentViewController alloc] initWithNibName:@"AssetContentViewController" bundle:nil] autorelease];
 	controller.group             = [self.groups objectAtIndex:indexPath.row];
-	controller.isTestModeUIImage = self.isTestModeUIImage;
+	controller.isViewModeUIImage = self.isViewModeUIImage;
 
 	[self.navigationController pushViewController:controller animated:YES];
 }
