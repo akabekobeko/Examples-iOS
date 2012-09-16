@@ -7,6 +7,7 @@
 //
 
 #import "AssetGroupViewController.h"
+#import "AssetContentViewController.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 
 @interface AssetGroupViewController () <UITableViewDataSource, UITableViewDelegate>
@@ -140,6 +141,15 @@
  */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+	// 戻るボタン
+	UIBarButtonItem* back = [[[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil] autorelease];
+	self.navigationItem.backBarButtonItem = back;
+	
+	AssetContentViewController* controller = [[[AssetContentViewController alloc] initWithNibName:@"AssetContentViewController" bundle:nil] autorelease];
+	controller.group             = [self.groups objectAtIndex:indexPath.row];
+	controller.isTestModeUIImage = self.isTestModeUIImage;
+
+	[self.navigationController pushViewController:controller animated:YES];
 }
 
 #pragma mark - Private

@@ -129,12 +129,13 @@
  */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	AssetGroupViewController* controller = [[[AssetGroupViewController alloc] initWithNibName:@"AssetGroupViewController" bundle:nil] autorelease];
-	controller.testMode = ( indexPath.row == 0 ? TestModeUIIMageView : TestModeOriginalCell );
-
+	// 戻るボタン
 	UIBarButtonItem* back = [[[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil] autorelease];
 	self.navigationItem.backBarButtonItem = back;
-	
+
+	AssetGroupViewController* controller = [[[AssetGroupViewController alloc] initWithNibName:@"AssetGroupViewController" bundle:nil] autorelease];
+	controller.isTestModeUIImage = ( indexPath.row == 0 );
+
 	[self.navigationController pushViewController:controller animated:YES];
 }
 

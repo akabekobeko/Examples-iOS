@@ -8,18 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-////////////////////////////////////////////////////////////////////////////////
-/**
- * テスト方法を表します。
- */
-typedef enum
-{
-	TestModeUIIMageView, //! UIImageView
-	TestModeOriginalCell //! 独自のセル
-
-} TestMode;
-
-////////////////////////////////////////////////////////////////////////////////
 /**
  * AssetsLibrary 内のグループを列挙します。
  * 実装にあたり、以下の記事を参考にしました。
@@ -29,7 +17,7 @@ typedef enum
  */
 @interface AssetGroupViewController : UIViewController
 
-@property (nonatomic, retain) IBOutlet UITableView* groupTableView; //! グループ一覧
-@property (nonatomic, assign) TestMode              testMode;       //! テスト方法
+@property (nonatomic, retain) IBOutlet UITableView* groupTableView;    //! グループ一覧
+@property (nonatomic, assign) BOOL                  isTestModeUIImage; //! テスト方法が UIImage であることを示す値
 
 @end

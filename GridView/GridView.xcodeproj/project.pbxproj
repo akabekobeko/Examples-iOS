@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1629527715FCBE0A00E9B246 /* AssetContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1629527515FCBE0A00E9B246 /* AssetContentViewController.m */; };
+		1629527815FCBE0A00E9B246 /* AssetContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1629527615FCBE0A00E9B246 /* AssetContentViewController.xib */; };
 		1683F42215FC17CC00042387 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1683F42115FC17CC00042387 /* UIKit.framework */; };
 		1683F42415FC17CC00042387 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1683F42315FC17CC00042387 /* Foundation.framework */; };
 		1683F42615FC17CC00042387 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1683F42515FC17CC00042387 /* CoreGraphics.framework */; };
@@ -18,11 +20,14 @@
 		16D5CD6B15FCA3D600BF672B /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16D5CD6915FCA3D600BF672B /* MenuViewController.xib */; };
 		16D5CD6F15FCA87400BF672B /* AssetGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D5CD6D15FCA87400BF672B /* AssetGroupViewController.m */; };
 		16D5CD7015FCA87400BF672B /* AssetGroupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16D5CD6E15FCA87400BF672B /* AssetGroupViewController.xib */; };
-		16D5CD7415FCA91300BF672B /* GridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D5CD7315FCA91300BF672B /* GridView.m */; };
+		16D5CD7415FCA91300BF672B /* ABGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D5CD7315FCA91300BF672B /* ABGridView.m */; };
 		16D5CD7615FCAA4B00BF672B /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D5CD7515FCAA4B00BF672B /* AssetsLibrary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1629527415FCBE0A00E9B246 /* AssetContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetContentViewController.h; sourceTree = "<group>"; };
+		1629527515FCBE0A00E9B246 /* AssetContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetContentViewController.m; sourceTree = "<group>"; };
+		1629527615FCBE0A00E9B246 /* AssetContentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssetContentViewController.xib; sourceTree = "<group>"; };
 		1683F41D15FC17CC00042387 /* GridView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GridView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1683F42115FC17CC00042387 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1683F42315FC17CC00042387 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -40,8 +45,8 @@
 		16D5CD6C15FCA87400BF672B /* AssetGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetGroupViewController.h; sourceTree = "<group>"; };
 		16D5CD6D15FCA87400BF672B /* AssetGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetGroupViewController.m; sourceTree = "<group>"; };
 		16D5CD6E15FCA87400BF672B /* AssetGroupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssetGroupViewController.xib; sourceTree = "<group>"; };
-		16D5CD7215FCA91300BF672B /* GridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridView.h; sourceTree = "<group>"; };
-		16D5CD7315FCA91300BF672B /* GridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridView.m; sourceTree = "<group>"; };
+		16D5CD7215FCA91300BF672B /* ABGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABGridView.h; sourceTree = "<group>"; };
+		16D5CD7315FCA91300BF672B /* ABGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABGridView.m; sourceTree = "<group>"; };
 		16D5CD7515FCAA4B00BF672B /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -122,6 +127,9 @@
 				16D5CD6C15FCA87400BF672B /* AssetGroupViewController.h */,
 				16D5CD6D15FCA87400BF672B /* AssetGroupViewController.m */,
 				16D5CD6E15FCA87400BF672B /* AssetGroupViewController.xib */,
+				1629527415FCBE0A00E9B246 /* AssetContentViewController.h */,
+				1629527515FCBE0A00E9B246 /* AssetContentViewController.m */,
+				1629527615FCBE0A00E9B246 /* AssetContentViewController.xib */,
 			);
 			name = "Views & Controllers";
 			sourceTree = "<group>";
@@ -129,8 +137,8 @@
 		16D5CD7115FCA88800BF672B /* Controls */ = {
 			isa = PBXGroup;
 			children = (
-				16D5CD7215FCA91300BF672B /* GridView.h */,
-				16D5CD7315FCA91300BF672B /* GridView.m */,
+				16D5CD7215FCA91300BF672B /* ABGridView.h */,
+				16D5CD7315FCA91300BF672B /* ABGridView.m */,
 			);
 			name = Controls;
 			sourceTree = "<group>";
@@ -189,6 +197,7 @@
 				1683F42C15FC17CC00042387 /* InfoPlist.strings in Resources */,
 				16D5CD6B15FCA3D600BF672B /* MenuViewController.xib in Resources */,
 				16D5CD7015FCA87400BF672B /* AssetGroupViewController.xib in Resources */,
+				1629527815FCBE0A00E9B246 /* AssetContentViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +212,8 @@
 				1683F43215FC17CC00042387 /* AppDelegate.m in Sources */,
 				16D5CD6A15FCA3D600BF672B /* MenuViewController.m in Sources */,
 				16D5CD6F15FCA87400BF672B /* AssetGroupViewController.m in Sources */,
-				16D5CD7415FCA91300BF672B /* GridView.m in Sources */,
+				16D5CD7415FCA91300BF672B /* ABGridView.m in Sources */,
+				1629527715FCBE0A00E9B246 /* AssetContentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
