@@ -7,7 +7,9 @@
 //
 
 #import "AssetContentViewController.h"
+#import "AssetCellViewController.h"
 #import <AssetsLibrary/AssetsLibrary.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface AssetContentViewController () <ABGridViewDelegate>
 
@@ -44,6 +46,8 @@
     self.assets = [[[NSMutableArray alloc] initWithCapacity:self.group.numberOfAssets] autorelease];
 
     self.assetGridView.delegate = self;
+    self.assetGridView.minimumColumnGap = 4;
+    self.assetGridView.itemSize = self.isViewModeUIImage ? CGSizeMake(75, 75) : CGSizeMake(100, 100);
 
     [self performSelectorInBackground:@selector(loadAssets) withObject:nil];
 }
@@ -114,38 +118,16 @@
 #pragma mark - Private
 
 /**
- * 指定されたインデックスのアイテムを UIImageView として取得します。
+ * 指定された UIView に影を付けます。
  *
- * @param gridView グリッド配置コンテナ。
- * @param index    インデックス。
- *
- * @return アイテム。
+ * @param view ビュー。
  */
-- (UIView *)viewForItemInGridViewAtImageView:(ABGridView *)gridView atIndex:(NSInteger)index
+- (void)addViewShadow:(UIView*)view
 {
-    UIImageView* item = ( UIImageView* )[gridView dequeueReusableItem];
-    if( item == nil )
-    {
-        item = [[[UIImageView alloc] init] autorelease];
-    }
- 
-    ALAsset* asset = [self.assets objectAtIndex:index];
-    item.image = [UIImage imageWithCGImage:[asset thumbnail]];
-    
-    return item;
-}
-
-/**
- * 指定されたインデックスのアイテムを独自セルとして取得します。
- *
- * @param gridView グリッド配置コンテナ。
- * @param index    インデックス。
- *
- * @return アイテム。
- */
-- (UIView *)viewForItemInGridViewAtOriginalCell:(ABGridView *)gridView atIndex:(NSInteger)index
-{
-    return nil;
+	view.layer.shadowColor   = [UIColor blackColor].CGColor;
+	view.layer.shadowOpacity = 0.9f;
+	view.layer.shadowOffset  = CGSizeMake( 0.0f, 1.0f );
+	view.layer.shadowRadius  = 1.0f;
 }
 
 /**
@@ -168,6 +150,53 @@
 - (void)reloadAssetGrid
 {
     [self.assetGridView reloadData];
+}
+
+/**
+ * 指定されたインデックスのアイテムを UIImageView として取得します。
+ *
+ * @param gridView グリッド配置コンテナ。
+ * @param index    インデックス。
+ *
+ * @return アイテム。
+ */
+- (UIView *)viewForItemInGridViewAtImageView:(ABGridView *)gridView atIndex:(NSInteger)index
+{
+    UIImageView* item = ( UIImageView* )[gridView dequeueReusableItem];
+    if( item == nil )
+    {
+        item = [[[UIImageView alloc] init] autorelease];
+    }
+    
+    ALAsset* asset = [self.assets objectAtIndex:index];
+    item.image = [UIImage imageWithCGImage:[asset thumbnail]];
+    
+    return item;
+}
+
+/**
+ * 指定されたインデックスのアイテムを独自セルとして取得します。
+ *
+ * @param gridView グリッド配置コンテナ。
+ * @param index    インデックス。
+ *
+ * @return アイテム。
+ */
+- (UIView *)viewForItemInGridViewAtOriginalCell:(ABGridView *)gridView atIndex:(NSInteger)index
+{
+    AssetCellView* item = ( AssetCellView* )[gridView dequeueReusableItem];
+    if( item == nil )
+    {
+        AssetCellViewController* controller = [[[AssetCellViewController alloc] initWithNibName:@"AssetCellViewController" bundle:nil] autorelease];
+        item = ( AssetCellView* )controller.view;
+        [self addViewShadow:item];
+    }
+    
+    ALAsset* asset = [self.assets objectAtIndex:index];
+    item.index           = index;
+    item.imageView.image = [UIImage imageWithCGImage:[asset thumbnail]];
+    
+    return item;
 }
 
 @end

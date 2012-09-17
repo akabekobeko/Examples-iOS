@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1629527715FCBE0A00E9B246 /* AssetContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1629527515FCBE0A00E9B246 /* AssetContentViewController.m */; };
 		1629527815FCBE0A00E9B246 /* AssetContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1629527615FCBE0A00E9B246 /* AssetContentViewController.xib */; };
+		1654A1261606DB84006FD383 /* AssetCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1654A1241606DB84006FD383 /* AssetCellViewController.m */; };
+		1654A1271606DB84006FD383 /* AssetCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1654A1251606DB84006FD383 /* AssetCellViewController.xib */; };
 		1683F42215FC17CC00042387 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1683F42115FC17CC00042387 /* UIKit.framework */; };
 		1683F42415FC17CC00042387 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1683F42315FC17CC00042387 /* Foundation.framework */; };
 		1683F42615FC17CC00042387 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1683F42515FC17CC00042387 /* CoreGraphics.framework */; };
@@ -28,6 +30,9 @@
 		1629527415FCBE0A00E9B246 /* AssetContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetContentViewController.h; sourceTree = "<group>"; };
 		1629527515FCBE0A00E9B246 /* AssetContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetContentViewController.m; sourceTree = "<group>"; };
 		1629527615FCBE0A00E9B246 /* AssetContentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssetContentViewController.xib; sourceTree = "<group>"; };
+		1654A1231606DB84006FD383 /* AssetCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetCellViewController.h; sourceTree = "<group>"; };
+		1654A1241606DB84006FD383 /* AssetCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetCellViewController.m; sourceTree = "<group>"; };
+		1654A1251606DB84006FD383 /* AssetCellViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssetCellViewController.xib; sourceTree = "<group>"; };
 		1683F41D15FC17CC00042387 /* GridView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GridView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1683F42115FC17CC00042387 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1683F42315FC17CC00042387 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -130,6 +135,9 @@
 				1629527415FCBE0A00E9B246 /* AssetContentViewController.h */,
 				1629527515FCBE0A00E9B246 /* AssetContentViewController.m */,
 				1629527615FCBE0A00E9B246 /* AssetContentViewController.xib */,
+				1654A1231606DB84006FD383 /* AssetCellViewController.h */,
+				1654A1241606DB84006FD383 /* AssetCellViewController.m */,
+				1654A1251606DB84006FD383 /* AssetCellViewController.xib */,
 			);
 			name = "Views & Controllers";
 			sourceTree = "<group>";
@@ -198,6 +206,7 @@
 				16D5CD6B15FCA3D600BF672B /* MenuViewController.xib in Resources */,
 				16D5CD7015FCA87400BF672B /* AssetGroupViewController.xib in Resources */,
 				1629527815FCBE0A00E9B246 /* AssetContentViewController.xib in Resources */,
+				1654A1271606DB84006FD383 /* AssetCellViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +223,7 @@
 				16D5CD6F15FCA87400BF672B /* AssetGroupViewController.m in Sources */,
 				16D5CD7415FCA91300BF672B /* ABGridView.m in Sources */,
 				1629527715FCBE0A00E9B246 /* AssetContentViewController.m in Sources */,
+				1654A1261606DB84006FD383 /* AssetCellViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
