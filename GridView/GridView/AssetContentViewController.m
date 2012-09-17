@@ -8,6 +8,7 @@
 
 #import "AssetContentViewController.h"
 #import "AssetCellViewController.h"
+#import "PhotoViewController.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <QuartzCore/QuartzCore.h>
 
@@ -113,6 +114,22 @@
  */
 - (void)gridView:(ABGridView *)gridView didSelectItemInGridView:(UIView *)view
 {
+    const NSInteger index = ( self.isViewModeUIImage ? view.tag : ( ( AssetCellView* )view ).index );
+    
+    ALAsset* asset = [self.assets objectAtIndex:index];
+    if( asset == nil ) { return; }
+    
+    ALAssetRepresentation* rep = [asset defaultRepresentation];
+    UIImage* image  = [UIImage imageWithCGImage:[rep fullScreenImage] scale:[rep scale] orientation:( UIImageOrientation )[rep orientation]];
+
+	// 戻るボタン
+	UIBarButtonItem* back = [[[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil] autorelease];
+	self.navigationItem.backBarButtonItem = back;
+
+    PhotoViewController* controller = [[[PhotoViewController alloc] initWithNibName:@"PhotoViewController" bundle:nil] autorelease];
+    controller.image = image;
+    
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 #pragma mark - Private
@@ -139,6 +156,10 @@
     {
         if( result == nil ) { return; }
 
+        // 写真のみ
+        NSString* type = [result valueForProperty:ALAssetPropertyType];
+        if( [type isEqualToString:ALAssetTypeVideo] ) { return; }
+        
         [self.assets addObject:result];
         [self performSelectorOnMainThread:@selector(reloadAssetGrid) withObject:nil waitUntilDone:NO];
     }];
