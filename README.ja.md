@@ -4,6 +4,8 @@
 
 iOS のサンプル プロジェクトをまとめたリポジトリです。
 
+* *[Redmine - Exsamples-iOS](http://akabeko.me/projects/projects/exsamples-ios "Redmine - Exsamples-iOS")*
+
 ## ライセンス
 
 The MIT License

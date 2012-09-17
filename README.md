@@ -4,6 +4,8 @@
 
 The repository has published a sample project for iOS.
 
+* *[Redmine - Exsamples-iOS](http://akabeko.me/projects/projects/exsamples-ios "Redmine - Exsamples-iOS")*
+
 ## License
 
 The MIT License (MIT)
