@@ -18,6 +18,10 @@
 		1615F82E16173F2A0046FCDB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1615F82D16173F2A0046FCDB /* Default-568h@2x.png */; };
 		1615F83116173F2A0046FCDB /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1615F83016173F2A0046FCDB /* MenuViewController.m */; };
 		1615F83416173F2A0046FCDB /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1615F83216173F2A0046FCDB /* MenuViewController.xib */; };
+		16FA4A25161744BE0055FC5C /* MoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16FA4A23161744BE0055FC5C /* MoviePlayerViewController.m */; };
+		16FA4A26161744BE0055FC5C /* MoviePlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16FA4A24161744BE0055FC5C /* MoviePlayerViewController.xib */; };
+		16FA4A2A161745070055FC5C /* AVPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16FA4A28161745070055FC5C /* AVPlayerViewController.m */; };
+		16FA4A2B161745070055FC5C /* AVPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16FA4A29161745070055FC5C /* AVPlayerViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,12 @@
 		1615F82F16173F2A0046FCDB /* MenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		1615F83016173F2A0046FCDB /* MenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		1615F83316173F2A0046FCDB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MenuViewController.xib; sourceTree = "<group>"; };
+		16FA4A22161744BE0055FC5C /* MoviePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviePlayerViewController.h; sourceTree = "<group>"; };
+		16FA4A23161744BE0055FC5C /* MoviePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviePlayerViewController.m; sourceTree = "<group>"; };
+		16FA4A24161744BE0055FC5C /* MoviePlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoviePlayerViewController.xib; sourceTree = "<group>"; };
+		16FA4A27161745070055FC5C /* AVPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVPlayerViewController.h; sourceTree = "<group>"; };
+		16FA4A28161745070055FC5C /* AVPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVPlayerViewController.m; sourceTree = "<group>"; };
+		16FA4A29161745070055FC5C /* AVPlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AVPlayerViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +98,12 @@
 				1615F82F16173F2A0046FCDB /* MenuViewController.h */,
 				1615F83016173F2A0046FCDB /* MenuViewController.m */,
 				1615F83216173F2A0046FCDB /* MenuViewController.xib */,
+				16FA4A22161744BE0055FC5C /* MoviePlayerViewController.h */,
+				16FA4A23161744BE0055FC5C /* MoviePlayerViewController.m */,
+				16FA4A24161744BE0055FC5C /* MoviePlayerViewController.xib */,
+				16FA4A27161745070055FC5C /* AVPlayerViewController.h */,
+				16FA4A28161745070055FC5C /* AVPlayerViewController.m */,
+				16FA4A29161745070055FC5C /* AVPlayerViewController.xib */,
 				1615F81E16173F2A0046FCDB /* Supporting Files */,
 			);
 			path = VideoPlayer;
@@ -163,6 +179,8 @@
 				1615F82C16173F2A0046FCDB /* Default@2x.png in Resources */,
 				1615F82E16173F2A0046FCDB /* Default-568h@2x.png in Resources */,
 				1615F83416173F2A0046FCDB /* MenuViewController.xib in Resources */,
+				16FA4A26161744BE0055FC5C /* MoviePlayerViewController.xib in Resources */,
+				16FA4A2B161745070055FC5C /* AVPlayerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +194,8 @@
 				1615F82416173F2A0046FCDB /* main.m in Sources */,
 				1615F82816173F2A0046FCDB /* AppDelegate.m in Sources */,
 				1615F83116173F2A0046FCDB /* MenuViewController.m in Sources */,
+				16FA4A25161744BE0055FC5C /* MoviePlayerViewController.m in Sources */,
+				16FA4A2A161745070055FC5C /* AVPlayerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +311,7 @@
 				1615F83916173F2A0046FCDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
