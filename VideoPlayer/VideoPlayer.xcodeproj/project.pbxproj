@@ -18,6 +18,8 @@
 		1615F82E16173F2A0046FCDB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1615F82D16173F2A0046FCDB /* Default-568h@2x.png */; };
 		1615F83116173F2A0046FCDB /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1615F83016173F2A0046FCDB /* MenuViewController.m */; };
 		1615F83416173F2A0046FCDB /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1615F83216173F2A0046FCDB /* MenuViewController.xib */; };
+		16A24487161837FF00E7D0DD /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16A24486161837FF00E7D0DD /* MediaPlayer.framework */; };
+		16A244891618383100E7D0DD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16A244881618383100E7D0DD /* AVFoundation.framework */; };
 		16FA4A25161744BE0055FC5C /* MoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16FA4A23161744BE0055FC5C /* MoviePlayerViewController.m */; };
 		16FA4A26161744BE0055FC5C /* MoviePlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16FA4A24161744BE0055FC5C /* MoviePlayerViewController.xib */; };
 		16FA4A2A161745070055FC5C /* AVPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16FA4A28161745070055FC5C /* AVPlayerViewController.m */; };
@@ -41,6 +43,8 @@
 		1615F82F16173F2A0046FCDB /* MenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		1615F83016173F2A0046FCDB /* MenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		1615F83316173F2A0046FCDB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MenuViewController.xib; sourceTree = "<group>"; };
+		16A24486161837FF00E7D0DD /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		16A244881618383100E7D0DD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		16FA4A22161744BE0055FC5C /* MoviePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviePlayerViewController.h; sourceTree = "<group>"; };
 		16FA4A23161744BE0055FC5C /* MoviePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviePlayerViewController.m; sourceTree = "<group>"; };
 		16FA4A24161744BE0055FC5C /* MoviePlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoviePlayerViewController.xib; sourceTree = "<group>"; };
@@ -54,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16A244891618383100E7D0DD /* AVFoundation.framework in Frameworks */,
+				16A24487161837FF00E7D0DD /* MediaPlayer.framework in Frameworks */,
 				1615F81816173F2A0046FCDB /* UIKit.framework in Frameworks */,
 				1615F81A16173F2A0046FCDB /* Foundation.framework in Frameworks */,
 				1615F81C16173F2A0046FCDB /* CoreGraphics.framework in Frameworks */,
@@ -83,9 +89,11 @@
 		1615F81616173F2A0046FCDB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1615F81716173F2A0046FCDB /* UIKit.framework */,
-				1615F81916173F2A0046FCDB /* Foundation.framework */,
+				16A244881618383100E7D0DD /* AVFoundation.framework */,
 				1615F81B16173F2A0046FCDB /* CoreGraphics.framework */,
+				1615F81916173F2A0046FCDB /* Foundation.framework */,
+				16A24486161837FF00E7D0DD /* MediaPlayer.framework */,
+				1615F81716173F2A0046FCDB /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
