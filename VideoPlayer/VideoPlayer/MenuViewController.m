@@ -188,6 +188,21 @@
  */
 - (void)saveToAppDocumentVideoToAlbum
 {
+	NSArray*  paths = NSSearchPathForDirectoriesInDomains( NSDocumentDirectory, NSUserDomainMask, YES );
+	NSString* dir   = [paths objectAtIndex:0];
+    NSArray*  files = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:dir error:nil];
+
+    for( NSString* file in files )
+    {
+        NSString* extention = [file pathExtension];
+        if( [extention isEqualToString:@"mov"] ||
+            [extention isEqualToString:@"mp4"] ||
+            [extention isEqualToString:@"m4v"])
+        {
+            NSString* path = [dir stringByAppendingPathComponent:file];
+            UISaveVideoAtPathToSavedPhotosAlbum( path, nil, nil, nil );
+        }
+    }
 }
 
 @end
