@@ -13,6 +13,11 @@
 		1654A1271606DB84006FD383 /* AssetCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1654A1251606DB84006FD383 /* AssetCellViewController.xib */; };
 		1654A12C1606E5C8006FD383 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1654A12A1606E5C8006FD383 /* PhotoViewController.m */; };
 		1654A12D1606E5C8006FD383 /* PhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1654A12B1606E5C8006FD383 /* PhotoViewController.xib */; };
+		165B83461621D65E00A68777 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 165B83411621D65E00A68777 /* Default-568h@2x.png */; };
+		165B83471621D65E00A68777 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 165B83421621D65E00A68777 /* Default.png */; };
+		165B83481621D65E00A68777 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 165B83431621D65E00A68777 /* Default@2x.png */; };
+		165B83491621D65E00A68777 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 165B83441621D65E00A68777 /* Icon.png */; };
+		165B834A1621D65E00A68777 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 165B83451621D65E00A68777 /* Icon@2x.png */; };
 		1683F42215FC17CC00042387 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1683F42115FC17CC00042387 /* UIKit.framework */; };
 		1683F42415FC17CC00042387 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1683F42315FC17CC00042387 /* Foundation.framework */; };
 		1683F42615FC17CC00042387 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1683F42515FC17CC00042387 /* CoreGraphics.framework */; };
@@ -38,6 +43,11 @@
 		1654A1291606E5C8006FD383 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
 		1654A12A1606E5C8006FD383 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 		1654A12B1606E5C8006FD383 /* PhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoViewController.xib; sourceTree = "<group>"; };
+		165B83411621D65E00A68777 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "images/Default-568h@2x.png"; sourceTree = "<group>"; };
+		165B83421621D65E00A68777 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = images/Default.png; sourceTree = "<group>"; };
+		165B83431621D65E00A68777 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "images/Default@2x.png"; sourceTree = "<group>"; };
+		165B83441621D65E00A68777 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = images/Icon.png; sourceTree = "<group>"; };
+		165B83451621D65E00A68777 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "images/Icon@2x.png"; sourceTree = "<group>"; };
 		1683F41D15FC17CC00042387 /* GridView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GridView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1683F42115FC17CC00042387 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1683F42315FC17CC00042387 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -120,6 +130,11 @@
 		1683F42815FC17CC00042387 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				165B83411621D65E00A68777 /* Default-568h@2x.png */,
+				165B83421621D65E00A68777 /* Default.png */,
+				165B83431621D65E00A68777 /* Default@2x.png */,
+				165B83441621D65E00A68777 /* Icon.png */,
+				165B83451621D65E00A68777 /* Icon@2x.png */,
 				1683F42915FC17CC00042387 /* GridView-Info.plist */,
 				1683F42A15FC17CC00042387 /* InfoPlist.strings */,
 				1683F42D15FC17CC00042387 /* main.m */,
@@ -216,6 +231,11 @@
 				1629527815FCBE0A00E9B246 /* AssetContentViewController.xib in Resources */,
 				1654A1271606DB84006FD383 /* AssetCellViewController.xib in Resources */,
 				1654A12D1606E5C8006FD383 /* PhotoViewController.xib in Resources */,
+				165B83461621D65E00A68777 /* Default-568h@2x.png in Resources */,
+				165B83471621D65E00A68777 /* Default.png in Resources */,
+				165B83481621D65E00A68777 /* Default@2x.png in Resources */,
+				165B83491621D65E00A68777 /* Icon.png in Resources */,
+				165B834A1621D65E00A68777 /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
