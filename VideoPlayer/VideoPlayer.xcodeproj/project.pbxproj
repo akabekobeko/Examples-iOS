@@ -7,17 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1608A27B1618984D00783911 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1608A27A1618984D00783911 /* AssetsLibrary.framework */; };
 		1615F81816173F2A0046FCDB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1615F81716173F2A0046FCDB /* UIKit.framework */; };
 		1615F81A16173F2A0046FCDB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1615F81916173F2A0046FCDB /* Foundation.framework */; };
 		1615F81C16173F2A0046FCDB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1615F81B16173F2A0046FCDB /* CoreGraphics.framework */; };
 		1615F82216173F2A0046FCDB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1615F82016173F2A0046FCDB /* InfoPlist.strings */; };
 		1615F82416173F2A0046FCDB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1615F82316173F2A0046FCDB /* main.m */; };
 		1615F82816173F2A0046FCDB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1615F82716173F2A0046FCDB /* AppDelegate.m */; };
-		1615F82A16173F2A0046FCDB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1615F82916173F2A0046FCDB /* Default.png */; };
-		1615F82C16173F2A0046FCDB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1615F82B16173F2A0046FCDB /* Default@2x.png */; };
-		1615F82E16173F2A0046FCDB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1615F82D16173F2A0046FCDB /* Default-568h@2x.png */; };
 		1615F83116173F2A0046FCDB /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1615F83016173F2A0046FCDB /* MenuViewController.m */; };
 		1615F83416173F2A0046FCDB /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1615F83216173F2A0046FCDB /* MenuViewController.xib */; };
+		165B83321621CFC100A68777 /* SelectVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 165B83301621CFC100A68777 /* SelectVideoViewController.m */; };
+		165B83331621CFC100A68777 /* SelectVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 165B83311621CFC100A68777 /* SelectVideoViewController.xib */; };
+		16834FBD1621D8EB0045F03F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16834FB81621D8EB0045F03F /* Default-568h@2x.png */; };
+		16834FBE1621D8EB0045F03F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 16834FB91621D8EB0045F03F /* Default.png */; };
+		16834FBF1621D8EB0045F03F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16834FBA1621D8EB0045F03F /* Default@2x.png */; };
+		16834FC01621D8EB0045F03F /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 16834FBB1621D8EB0045F03F /* Icon.png */; };
+		16834FC11621D8EB0045F03F /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16834FBC1621D8EB0045F03F /* Icon@2x.png */; };
+		16834FC91621DBFB0045F03F /* ABGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16834FC81621DBFB0045F03F /* ABGridView.m */; };
 		16A24487161837FF00E7D0DD /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16A24486161837FF00E7D0DD /* MediaPlayer.framework */; };
 		16A244891618383100E7D0DD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16A244881618383100E7D0DD /* AVFoundation.framework */; };
 		16FA4A25161744BE0055FC5C /* MoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16FA4A23161744BE0055FC5C /* MoviePlayerViewController.m */; };
@@ -27,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1608A27A1618984D00783911 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		1615F81316173F2A0046FCDB /* VideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1615F81716173F2A0046FCDB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1615F81916173F2A0046FCDB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -37,12 +44,19 @@
 		1615F82516173F2A0046FCDB /* VideoPlayer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VideoPlayer-Prefix.pch"; sourceTree = "<group>"; };
 		1615F82616173F2A0046FCDB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1615F82716173F2A0046FCDB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1615F82916173F2A0046FCDB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		1615F82B16173F2A0046FCDB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		1615F82D16173F2A0046FCDB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		1615F82F16173F2A0046FCDB /* MenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		1615F83016173F2A0046FCDB /* MenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		1615F83316173F2A0046FCDB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MenuViewController.xib; sourceTree = "<group>"; };
+		165B832F1621CFC100A68777 /* SelectVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectVideoViewController.h; sourceTree = "<group>"; };
+		165B83301621CFC100A68777 /* SelectVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectVideoViewController.m; sourceTree = "<group>"; };
+		165B83311621CFC100A68777 /* SelectVideoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectVideoViewController.xib; sourceTree = "<group>"; };
+		16834FB81621D8EB0045F03F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "images/Default-568h@2x.png"; sourceTree = "<group>"; };
+		16834FB91621D8EB0045F03F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = images/Default.png; sourceTree = "<group>"; };
+		16834FBA1621D8EB0045F03F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "images/Default@2x.png"; sourceTree = "<group>"; };
+		16834FBB1621D8EB0045F03F /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = images/Icon.png; sourceTree = "<group>"; };
+		16834FBC1621D8EB0045F03F /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "images/Icon@2x.png"; sourceTree = "<group>"; };
+		16834FC71621DBFB0045F03F /* ABGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABGridView.h; sourceTree = "<group>"; };
+		16834FC81621DBFB0045F03F /* ABGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABGridView.m; sourceTree = "<group>"; };
 		16A24486161837FF00E7D0DD /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		16A244881618383100E7D0DD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		16FA4A22161744BE0055FC5C /* MoviePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviePlayerViewController.h; sourceTree = "<group>"; };
@@ -58,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1608A27B1618984D00783911 /* AssetsLibrary.framework in Frameworks */,
 				16A244891618383100E7D0DD /* AVFoundation.framework in Frameworks */,
 				16A24487161837FF00E7D0DD /* MediaPlayer.framework in Frameworks */,
 				1615F81816173F2A0046FCDB /* UIKit.framework in Frameworks */,
@@ -89,6 +104,7 @@
 		1615F81616173F2A0046FCDB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1608A27A1618984D00783911 /* AssetsLibrary.framework */,
 				16A244881618383100E7D0DD /* AVFoundation.framework */,
 				1615F81B16173F2A0046FCDB /* CoreGraphics.framework */,
 				1615F81916173F2A0046FCDB /* Foundation.framework */,
@@ -103,15 +119,8 @@
 			children = (
 				1615F82616173F2A0046FCDB /* AppDelegate.h */,
 				1615F82716173F2A0046FCDB /* AppDelegate.m */,
-				1615F82F16173F2A0046FCDB /* MenuViewController.h */,
-				1615F83016173F2A0046FCDB /* MenuViewController.m */,
-				1615F83216173F2A0046FCDB /* MenuViewController.xib */,
-				16FA4A22161744BE0055FC5C /* MoviePlayerViewController.h */,
-				16FA4A23161744BE0055FC5C /* MoviePlayerViewController.m */,
-				16FA4A24161744BE0055FC5C /* MoviePlayerViewController.xib */,
-				16FA4A27161745070055FC5C /* AVPlayerViewController.h */,
-				16FA4A28161745070055FC5C /* AVPlayerViewController.m */,
-				16FA4A29161745070055FC5C /* AVPlayerViewController.xib */,
+				165B83351621D00400A68777 /* Controls */,
+				16834FCE1621E0240045F03F /* Views & Controllers */,
 				1615F81E16173F2A0046FCDB /* Supporting Files */,
 			);
 			path = VideoPlayer;
@@ -120,15 +129,53 @@
 		1615F81E16173F2A0046FCDB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				16834FC21621D8F00045F03F /* images */,
 				1615F81F16173F2A0046FCDB /* VideoPlayer-Info.plist */,
 				1615F82016173F2A0046FCDB /* InfoPlist.strings */,
 				1615F82316173F2A0046FCDB /* main.m */,
 				1615F82516173F2A0046FCDB /* VideoPlayer-Prefix.pch */,
-				1615F82916173F2A0046FCDB /* Default.png */,
-				1615F82B16173F2A0046FCDB /* Default@2x.png */,
-				1615F82D16173F2A0046FCDB /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		165B83351621D00400A68777 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				16834FC71621DBFB0045F03F /* ABGridView.h */,
+				16834FC81621DBFB0045F03F /* ABGridView.m */,
+			);
+			name = Controls;
+			sourceTree = "<group>";
+		};
+		16834FC21621D8F00045F03F /* images */ = {
+			isa = PBXGroup;
+			children = (
+				16834FB81621D8EB0045F03F /* Default-568h@2x.png */,
+				16834FB91621D8EB0045F03F /* Default.png */,
+				16834FBA1621D8EB0045F03F /* Default@2x.png */,
+				16834FBB1621D8EB0045F03F /* Icon.png */,
+				16834FBC1621D8EB0045F03F /* Icon@2x.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		16834FCE1621E0240045F03F /* Views & Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1615F82F16173F2A0046FCDB /* MenuViewController.h */,
+				1615F83016173F2A0046FCDB /* MenuViewController.m */,
+				1615F83216173F2A0046FCDB /* MenuViewController.xib */,
+				16FA4A22161744BE0055FC5C /* MoviePlayerViewController.h */,
+				165B832F1621CFC100A68777 /* SelectVideoViewController.h */,
+				165B83301621CFC100A68777 /* SelectVideoViewController.m */,
+				165B83311621CFC100A68777 /* SelectVideoViewController.xib */,
+				16FA4A23161744BE0055FC5C /* MoviePlayerViewController.m */,
+				16FA4A24161744BE0055FC5C /* MoviePlayerViewController.xib */,
+				16FA4A27161745070055FC5C /* AVPlayerViewController.h */,
+				16FA4A28161745070055FC5C /* AVPlayerViewController.m */,
+				16FA4A29161745070055FC5C /* AVPlayerViewController.xib */,
+			);
+			name = "Views & Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,12 +230,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1615F82216173F2A0046FCDB /* InfoPlist.strings in Resources */,
-				1615F82A16173F2A0046FCDB /* Default.png in Resources */,
-				1615F82C16173F2A0046FCDB /* Default@2x.png in Resources */,
-				1615F82E16173F2A0046FCDB /* Default-568h@2x.png in Resources */,
 				1615F83416173F2A0046FCDB /* MenuViewController.xib in Resources */,
 				16FA4A26161744BE0055FC5C /* MoviePlayerViewController.xib in Resources */,
 				16FA4A2B161745070055FC5C /* AVPlayerViewController.xib in Resources */,
+				165B83331621CFC100A68777 /* SelectVideoViewController.xib in Resources */,
+				16834FBD1621D8EB0045F03F /* Default-568h@2x.png in Resources */,
+				16834FBE1621D8EB0045F03F /* Default.png in Resources */,
+				16834FBF1621D8EB0045F03F /* Default@2x.png in Resources */,
+				16834FC01621D8EB0045F03F /* Icon.png in Resources */,
+				16834FC11621D8EB0045F03F /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +254,8 @@
 				1615F83116173F2A0046FCDB /* MenuViewController.m in Sources */,
 				16FA4A25161744BE0055FC5C /* MoviePlayerViewController.m in Sources */,
 				16FA4A2A161745070055FC5C /* AVPlayerViewController.m in Sources */,
+				165B83321621CFC100A68777 /* SelectVideoViewController.m in Sources */,
+				16834FC91621DBFB0045F03F /* ABGridView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

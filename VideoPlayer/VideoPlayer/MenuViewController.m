@@ -10,7 +10,20 @@
 #import "MoviePlayerViewController.h"
 #import "AVPlayerViewController.h"
 
-@interface MenuViewController () <UITableViewDataSource, UITableViewDelegate>
+/**
+ * 動画の再生方法を表します。
+ */
+typedef enum
+{
+    VideoModeNone,          //! 未定義
+    VideoModeMPMoviePlayer, //! MPMoviePlayerController を利用
+    VideoModeAVPlayer       //! AVPlayer を利用
+    
+} VideoMode;
+
+@interface MenuViewController () <UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate>
+
+@property (nonatomic, assign) VideoMode videoMode; //! 動画の再生方法
 
 @end
 
@@ -150,6 +163,16 @@
     }
 }
 
+/**
+ * 画像の選択がキャンセルされた時に発生します。
+ *
+ * @param picker 画像選択コントロール。
+ */
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+	[self dismissModalViewControllerAnimated:YES];
+}
+
 #pragma mark - Private
 
 /**
@@ -167,8 +190,8 @@
  */
 - (void)showMoviePlayer
 {
-    self.navigationItem.backBarButtonItem = [self backButton];
-    [self.navigationController pushViewController:[MoviePlayerViewController controller] animated:YES];
+    self.videoMode = VideoModeMPMoviePlayer;
+    
 }
 
 /**
@@ -176,8 +199,7 @@
  */
 - (void)showAVPlayer
 {
-    self.navigationItem.backBarButtonItem = [self backButton];
-    [self.navigationController pushViewController:[AVPlayerViewController controller] animated:YES];
+    self.videoMode = VideoModeAVPlayer;
 }
 
 /**

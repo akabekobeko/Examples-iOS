@@ -7,10 +7,13 @@
 //
 
 #import "SelectVideoViewController.h"
+#import <AssetsLibrary/AssetsLibrary.h>
 
 @interface SelectVideoViewController () <ABGridViewDelegate>
 
-@property (nonatomic, assign) id<SelectVideoViewControllerDelegate> delegate; //! デリゲート
+@property (nonatomic, assign) id<SelectVideoViewControllerDelegate> delegate;      //! デリゲート
+@property (nonatomic, retain) ALAssetsLibrary*                      assetsLibrary; //! アセット情報ライブラリ
+@property (nonatomic, retain) NSMutableArray*                       assets;        //! アセット情報のコレクション
 
 @end
 
@@ -62,10 +65,50 @@
 {
     self.delegate = nil;
     self.gridView = nil;
+    self.assets   = nil;
 
     [super viewDidUnload];
 }
 
 #pragma mark - ABGridViewDelegate
+
+#pragma mark - Grid view delegate
+
+/**
+ * グリッド配置するアイテムの総数を取得します。
+ *
+ * @param gridView グリッド配置コンテナ。
+ *
+ * @return アイテムの総数。
+ */
+- (NSInteger)numberOfItemsInGridView:(ABGridView *)gridView
+{
+    return self.assets.count;
+}
+
+/**
+ * 指定されたインデックスのアイテムを取得します。
+ *
+ * @param gridView グリッド配置コンテナ。
+ * @param index    インデックス。
+ *
+ * @return アイテム。
+ */
+- (UIView *)viewForItemInGridView:(ABGridView *)gridView atIndex:(NSInteger)index
+{
+    return nil;
+}
+
+/**
+ * アイテムが選択された時に発生します。
+ *
+ * @param gridView グリッド配置コンテナ。
+ * @param view     アイテム。
+ */
+- (void)gridView:(ABGridView *)gridView didSelectItemInGridView:(UIView *)view
+{
+}
+
+#pragma mark - Private
 
 @end

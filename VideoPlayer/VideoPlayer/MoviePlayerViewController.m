@@ -7,8 +7,11 @@
 //
 
 #import "MoviePlayerViewController.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface MoviePlayerViewController ()
+
+@property (nonatomic, retain) MPMoviePlayerController* moviePlayer; //! 動画プレイヤー
 
 @end
 
