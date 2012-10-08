@@ -11,7 +11,7 @@
 
 @interface MoviePlayerViewController ()
 
-@property (nonatomic, retain) MPMoviePlayerController* moviePlayer; //! 動画プレイヤー
+@property (nonatomic, retain) MPMoviePlayerController* videoPlayer; //! 動画プレイヤー
 @property (nonatomic, retain) NSURL*                   videoUrl;    //! 動画の URL
 
 @end
@@ -40,6 +40,11 @@
  */
 - (void)dealloc
 {
+    [self.videoPlayer stop];
+    
+    self.videoPlayer = nil;
+    self.videoUrl    = nil;
+    
     [super dealloc];
 }
 
@@ -53,6 +58,17 @@
     [super viewDidLoad];
     
     self.title = @"MPMoviePlayerController";
+
+    self.videoPlayer = [[[MPMoviePlayerController alloc] initWithContentURL:self.videoUrl] autorelease];
+    self.videoPlayer.controlStyle             = MPMovieControlStyleDefault;
+    self.videoPlayer.scalingMode              = MPMovieScalingModeAspectFit;
+    self.videoPlayer.shouldAutoplay           = NO;
+	self.videoPlayer.view.autoresizingMask    = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+	self.videoPlayer.view.autoresizesSubviews = YES;
+    self.videoPlayer.view.frame               = self.view.bounds;
+    
+    [self.videoPlayer prepareToPlay];
+    [self.view addSubview:self.videoPlayer.view];
 }
 
 /**
@@ -60,6 +76,11 @@
  */
 - (void)viewDidUnload
 {
+    [self.videoPlayer stop];
+
+    self.videoPlayer = nil;
+    self.videoUrl    = nil;
+
     [super viewDidUnload];
 }
 
