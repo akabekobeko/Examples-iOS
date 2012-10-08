@@ -47,7 +47,8 @@ typedef enum
  */
 - (void)dealloc
 {
-    [_menuTableView release];
+    self.menuTableView = nil;
+
     [super dealloc];
 }
 
@@ -71,7 +72,8 @@ typedef enum
  */
 - (void)viewDidUnload
 {
-    [self setMenuTableView:nil];
+    self.menuTableView = nil;
+
     [super viewDidUnload];
 }
 

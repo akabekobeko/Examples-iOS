@@ -28,6 +28,12 @@
 		168B676116229CAE002FE4F0 /* AssetCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 168B675F16229CAE002FE4F0 /* AssetCellViewController.xib */; };
 		16A24487161837FF00E7D0DD /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16A24486161837FF00E7D0DD /* MediaPlayer.framework */; };
 		16A244891618383100E7D0DD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16A244881618383100E7D0DD /* AVFoundation.framework */; };
+		16BC396F1622C5A5000C8E99 /* AVPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16BC396E1622C5A4000C8E99 /* AVPlayerView.m */; };
+		16BC39741622CAFE000C8E99 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 16BC39701622CAFE000C8E99 /* pause.png */; };
+		16BC39751622CAFE000C8E99 /* pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16BC39711622CAFE000C8E99 /* pause@2x.png */; };
+		16BC39761622CAFE000C8E99 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 16BC39721622CAFE000C8E99 /* play.png */; };
+		16BC39771622CAFE000C8E99 /* play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16BC39731622CAFE000C8E99 /* play@2x.png */; };
+		16BC397D1622ED92000C8E99 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16BC397C1622ED92000C8E99 /* CoreMedia.framework */; };
 		16FA4A25161744BE0055FC5C /* MoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16FA4A23161744BE0055FC5C /* MoviePlayerViewController.m */; };
 		16FA4A26161744BE0055FC5C /* MoviePlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16FA4A24161744BE0055FC5C /* MoviePlayerViewController.xib */; };
 		16FA4A2A161745070055FC5C /* AVPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16FA4A28161745070055FC5C /* AVPlayerViewController.m */; };
@@ -64,6 +70,13 @@
 		168B675F16229CAE002FE4F0 /* AssetCellViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssetCellViewController.xib; sourceTree = "<group>"; };
 		16A24486161837FF00E7D0DD /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		16A244881618383100E7D0DD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		16BC396D1622C5A4000C8E99 /* AVPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVPlayerView.h; sourceTree = "<group>"; };
+		16BC396E1622C5A4000C8E99 /* AVPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVPlayerView.m; sourceTree = "<group>"; };
+		16BC39701622CAFE000C8E99 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pause.png; path = images/pause.png; sourceTree = "<group>"; };
+		16BC39711622CAFE000C8E99 /* pause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pause@2x.png"; path = "images/pause@2x.png"; sourceTree = "<group>"; };
+		16BC39721622CAFE000C8E99 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = play.png; path = images/play.png; sourceTree = "<group>"; };
+		16BC39731622CAFE000C8E99 /* play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "play@2x.png"; path = "images/play@2x.png"; sourceTree = "<group>"; };
+		16BC397C1622ED92000C8E99 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		16FA4A22161744BE0055FC5C /* MoviePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviePlayerViewController.h; sourceTree = "<group>"; };
 		16FA4A23161744BE0055FC5C /* MoviePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviePlayerViewController.m; sourceTree = "<group>"; };
 		16FA4A24161744BE0055FC5C /* MoviePlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoviePlayerViewController.xib; sourceTree = "<group>"; };
@@ -77,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16BC397D1622ED92000C8E99 /* CoreMedia.framework in Frameworks */,
 				1608A27B1618984D00783911 /* AssetsLibrary.framework in Frameworks */,
 				16A244891618383100E7D0DD /* AVFoundation.framework in Frameworks */,
 				16A24487161837FF00E7D0DD /* MediaPlayer.framework in Frameworks */,
@@ -112,6 +126,7 @@
 				1608A27A1618984D00783911 /* AssetsLibrary.framework */,
 				16A244881618383100E7D0DD /* AVFoundation.framework */,
 				1615F81B16173F2A0046FCDB /* CoreGraphics.framework */,
+				16BC397C1622ED92000C8E99 /* CoreMedia.framework */,
 				1615F81916173F2A0046FCDB /* Foundation.framework */,
 				16A24486161837FF00E7D0DD /* MediaPlayer.framework */,
 				1615F81716173F2A0046FCDB /* UIKit.framework */,
@@ -154,6 +169,8 @@
 				165B832F1621CFC100A68777 /* AssetsViewController.h */,
 				165B83301621CFC100A68777 /* AssetsViewController.m */,
 				165B83311621CFC100A68777 /* AssetsViewController.xib */,
+				16BC396D1622C5A4000C8E99 /* AVPlayerView.h */,
+				16BC396E1622C5A4000C8E99 /* AVPlayerView.m */,
 			);
 			name = Controls;
 			sourceTree = "<group>";
@@ -161,6 +178,10 @@
 		16834FC21621D8F00045F03F /* images */ = {
 			isa = PBXGroup;
 			children = (
+				16BC39701622CAFE000C8E99 /* pause.png */,
+				16BC39711622CAFE000C8E99 /* pause@2x.png */,
+				16BC39721622CAFE000C8E99 /* play.png */,
+				16BC39731622CAFE000C8E99 /* play@2x.png */,
 				16834FB81621D8EB0045F03F /* Default-568h@2x.png */,
 				16834FB91621D8EB0045F03F /* Default.png */,
 				16834FBA1621D8EB0045F03F /* Default@2x.png */,
@@ -248,6 +269,10 @@
 				16834FC01621D8EB0045F03F /* Icon.png in Resources */,
 				16834FC11621D8EB0045F03F /* Icon@2x.png in Resources */,
 				168B676116229CAE002FE4F0 /* AssetCellViewController.xib in Resources */,
+				16BC39741622CAFE000C8E99 /* pause.png in Resources */,
+				16BC39751622CAFE000C8E99 /* pause@2x.png in Resources */,
+				16BC39761622CAFE000C8E99 /* play.png in Resources */,
+				16BC39771622CAFE000C8E99 /* play@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +291,7 @@
 				165B83321621CFC100A68777 /* AssetsViewController.m in Sources */,
 				16834FC91621DBFB0045F03F /* ABGridView.m in Sources */,
 				168B676016229CAE002FE4F0 /* AssetCellViewController.m in Sources */,
+				16BC396F1622C5A5000C8E99 /* AVPlayerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
