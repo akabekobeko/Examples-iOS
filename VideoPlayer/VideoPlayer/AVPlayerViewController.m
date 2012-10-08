@@ -10,6 +10,8 @@
 
 @interface AVPlayerViewController ()
 
+@property (nonatomic, retain) NSURL* videoUrl; //! 動画の URL
+
 @end
 
 @implementation AVPlayerViewController
@@ -19,11 +21,16 @@
 /**
  * コントローラのインスタンスを生成します。
  *
+ * @param videoUrl 動画の URL。
+ *
  * @return インスタンス。
  */
-+ (AVPlayerViewController *)controller
++ (AVPlayerViewController *)controller:(NSURL *)videoUrl
 {
-    return [[[AVPlayerViewController alloc] initWithNibName:@"AVPlayerViewController" bundle:nil] autorelease];
+    AVPlayerViewController* controller = [[[AVPlayerViewController alloc] initWithNibName:@"AVPlayerViewController" bundle:nil] autorelease];
+    controller.videoUrl = videoUrl;
+
+    return controller;
 }
 
 /**

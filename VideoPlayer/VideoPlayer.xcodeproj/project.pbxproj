@@ -16,14 +16,16 @@
 		1615F82816173F2A0046FCDB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1615F82716173F2A0046FCDB /* AppDelegate.m */; };
 		1615F83116173F2A0046FCDB /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1615F83016173F2A0046FCDB /* MenuViewController.m */; };
 		1615F83416173F2A0046FCDB /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1615F83216173F2A0046FCDB /* MenuViewController.xib */; };
-		165B83321621CFC100A68777 /* SelectVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 165B83301621CFC100A68777 /* SelectVideoViewController.m */; };
-		165B83331621CFC100A68777 /* SelectVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 165B83311621CFC100A68777 /* SelectVideoViewController.xib */; };
+		165B83321621CFC100A68777 /* AssetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 165B83301621CFC100A68777 /* AssetsViewController.m */; };
+		165B83331621CFC100A68777 /* AssetsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 165B83311621CFC100A68777 /* AssetsViewController.xib */; };
 		16834FBD1621D8EB0045F03F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16834FB81621D8EB0045F03F /* Default-568h@2x.png */; };
 		16834FBE1621D8EB0045F03F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 16834FB91621D8EB0045F03F /* Default.png */; };
 		16834FBF1621D8EB0045F03F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16834FBA1621D8EB0045F03F /* Default@2x.png */; };
 		16834FC01621D8EB0045F03F /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 16834FBB1621D8EB0045F03F /* Icon.png */; };
 		16834FC11621D8EB0045F03F /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16834FBC1621D8EB0045F03F /* Icon@2x.png */; };
 		16834FC91621DBFB0045F03F /* ABGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16834FC81621DBFB0045F03F /* ABGridView.m */; };
+		168B676016229CAE002FE4F0 /* AssetCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 168B675E16229CAE002FE4F0 /* AssetCellViewController.m */; };
+		168B676116229CAE002FE4F0 /* AssetCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 168B675F16229CAE002FE4F0 /* AssetCellViewController.xib */; };
 		16A24487161837FF00E7D0DD /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16A24486161837FF00E7D0DD /* MediaPlayer.framework */; };
 		16A244891618383100E7D0DD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16A244881618383100E7D0DD /* AVFoundation.framework */; };
 		16FA4A25161744BE0055FC5C /* MoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16FA4A23161744BE0055FC5C /* MoviePlayerViewController.m */; };
@@ -47,9 +49,9 @@
 		1615F82F16173F2A0046FCDB /* MenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		1615F83016173F2A0046FCDB /* MenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		1615F83316173F2A0046FCDB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MenuViewController.xib; sourceTree = "<group>"; };
-		165B832F1621CFC100A68777 /* SelectVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectVideoViewController.h; sourceTree = "<group>"; };
-		165B83301621CFC100A68777 /* SelectVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectVideoViewController.m; sourceTree = "<group>"; };
-		165B83311621CFC100A68777 /* SelectVideoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectVideoViewController.xib; sourceTree = "<group>"; };
+		165B832F1621CFC100A68777 /* AssetsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetsViewController.h; sourceTree = "<group>"; };
+		165B83301621CFC100A68777 /* AssetsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetsViewController.m; sourceTree = "<group>"; };
+		165B83311621CFC100A68777 /* AssetsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssetsViewController.xib; sourceTree = "<group>"; };
 		16834FB81621D8EB0045F03F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "images/Default-568h@2x.png"; sourceTree = "<group>"; };
 		16834FB91621D8EB0045F03F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = images/Default.png; sourceTree = "<group>"; };
 		16834FBA1621D8EB0045F03F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "images/Default@2x.png"; sourceTree = "<group>"; };
@@ -57,6 +59,9 @@
 		16834FBC1621D8EB0045F03F /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "images/Icon@2x.png"; sourceTree = "<group>"; };
 		16834FC71621DBFB0045F03F /* ABGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABGridView.h; sourceTree = "<group>"; };
 		16834FC81621DBFB0045F03F /* ABGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABGridView.m; sourceTree = "<group>"; };
+		168B675D16229CAE002FE4F0 /* AssetCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetCellViewController.h; sourceTree = "<group>"; };
+		168B675E16229CAE002FE4F0 /* AssetCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetCellViewController.m; sourceTree = "<group>"; };
+		168B675F16229CAE002FE4F0 /* AssetCellViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AssetCellViewController.xib; sourceTree = "<group>"; };
 		16A24486161837FF00E7D0DD /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		16A244881618383100E7D0DD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		16FA4A22161744BE0055FC5C /* MoviePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviePlayerViewController.h; sourceTree = "<group>"; };
@@ -143,6 +148,12 @@
 			children = (
 				16834FC71621DBFB0045F03F /* ABGridView.h */,
 				16834FC81621DBFB0045F03F /* ABGridView.m */,
+				168B675D16229CAE002FE4F0 /* AssetCellViewController.h */,
+				168B675E16229CAE002FE4F0 /* AssetCellViewController.m */,
+				168B675F16229CAE002FE4F0 /* AssetCellViewController.xib */,
+				165B832F1621CFC100A68777 /* AssetsViewController.h */,
+				165B83301621CFC100A68777 /* AssetsViewController.m */,
+				165B83311621CFC100A68777 /* AssetsViewController.xib */,
 			);
 			name = Controls;
 			sourceTree = "<group>";
@@ -166,9 +177,6 @@
 				1615F83016173F2A0046FCDB /* MenuViewController.m */,
 				1615F83216173F2A0046FCDB /* MenuViewController.xib */,
 				16FA4A22161744BE0055FC5C /* MoviePlayerViewController.h */,
-				165B832F1621CFC100A68777 /* SelectVideoViewController.h */,
-				165B83301621CFC100A68777 /* SelectVideoViewController.m */,
-				165B83311621CFC100A68777 /* SelectVideoViewController.xib */,
 				16FA4A23161744BE0055FC5C /* MoviePlayerViewController.m */,
 				16FA4A24161744BE0055FC5C /* MoviePlayerViewController.xib */,
 				16FA4A27161745070055FC5C /* AVPlayerViewController.h */,
@@ -233,12 +241,13 @@
 				1615F83416173F2A0046FCDB /* MenuViewController.xib in Resources */,
 				16FA4A26161744BE0055FC5C /* MoviePlayerViewController.xib in Resources */,
 				16FA4A2B161745070055FC5C /* AVPlayerViewController.xib in Resources */,
-				165B83331621CFC100A68777 /* SelectVideoViewController.xib in Resources */,
+				165B83331621CFC100A68777 /* AssetsViewController.xib in Resources */,
 				16834FBD1621D8EB0045F03F /* Default-568h@2x.png in Resources */,
 				16834FBE1621D8EB0045F03F /* Default.png in Resources */,
 				16834FBF1621D8EB0045F03F /* Default@2x.png in Resources */,
 				16834FC01621D8EB0045F03F /* Icon.png in Resources */,
 				16834FC11621D8EB0045F03F /* Icon@2x.png in Resources */,
+				168B676116229CAE002FE4F0 /* AssetCellViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,8 +263,9 @@
 				1615F83116173F2A0046FCDB /* MenuViewController.m in Sources */,
 				16FA4A25161744BE0055FC5C /* MoviePlayerViewController.m in Sources */,
 				16FA4A2A161745070055FC5C /* AVPlayerViewController.m in Sources */,
-				165B83321621CFC100A68777 /* SelectVideoViewController.m in Sources */,
+				165B83321621CFC100A68777 /* AssetsViewController.m in Sources */,
 				16834FC91621DBFB0045F03F /* ABGridView.m in Sources */,
+				168B676016229CAE002FE4F0 /* AssetCellViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

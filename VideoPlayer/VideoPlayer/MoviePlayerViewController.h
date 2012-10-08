@@ -13,6 +13,6 @@
  */
 @interface MoviePlayerViewController : UIViewController
 
-+ (MoviePlayerViewController *)controller;
++ (MoviePlayerViewController *)controller:(NSURL *)videoUrl;
 
 @end

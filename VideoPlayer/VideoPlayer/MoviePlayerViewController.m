@@ -12,6 +12,7 @@
 @interface MoviePlayerViewController ()
 
 @property (nonatomic, retain) MPMoviePlayerController* moviePlayer; //! 動画プレイヤー
+@property (nonatomic, retain) NSURL*                   videoUrl;    //! 動画の URL
 
 @end
 
@@ -22,11 +23,16 @@
 /**
  * コントローラのインスタンスを生成します。
  *
+ * @param videoUrl 動画の URL。
+ *
  * @return インスタンス。
  */
-+ (MoviePlayerViewController *)controller
++ (MoviePlayerViewController *)controller:(NSURL *)videoUrl
 {
-    return [[[MoviePlayerViewController alloc] initWithNibName:@"MoviePlayerViewController" bundle:nil] autorelease];
+    MoviePlayerViewController* controller = [[[MoviePlayerViewController alloc] initWithNibName:@"MoviePlayerViewController" bundle:nil] autorelease];
+    controller.videoUrl = videoUrl;
+
+    return controller;
 }
 
 /**

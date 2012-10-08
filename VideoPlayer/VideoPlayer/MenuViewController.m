@@ -9,6 +9,7 @@
 #import "MenuViewController.h"
 #import "MoviePlayerViewController.h"
 #import "AVPlayerViewController.h"
+#import "AssetsViewController.h"
 
 /**
  * 動画の再生方法を表します。
@@ -21,7 +22,7 @@ typedef enum
     
 } VideoMode;
 
-@interface MenuViewController () <UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate>
+@interface MenuViewController () <UITableViewDataSource, UITableViewDelegate, UINavigationControllerDelegate, AssetsViewControllerDelegate>
 
 @property (nonatomic, assign) VideoMode videoMode; //! 動画の再生方法
 
@@ -173,6 +174,36 @@ typedef enum
 	[self dismissModalViewControllerAnimated:YES];
 }
 
+#pragma mark - AssetsViewControllerDelegate
+
+/**
+ * アセット情報の選択が完了した時に発生します。
+ *
+ * @param controller アセット情報選択コントローラー。
+ * @param assetUrl   選択されたアセット情報の URL。
+ */
+- (void)selectAssetDidFinish:(AssetsViewController *)controller assetUrl:(NSURL *)assetUrl
+{
+    [self.navigationController dismissModalViewControllerAnimated:YES];
+
+    switch( self.videoMode )
+    {
+    case VideoModeAVPlayer:
+        self.navigationItem.backBarButtonItem = [self backButton];
+        [self.navigationController pushViewController:[AVPlayerViewController controller:assetUrl] animated:YES];
+        break;
+  
+    case VideoModeMPMoviePlayer:
+        self.navigationItem.backBarButtonItem = [self backButton];
+        [self.navigationController pushViewController:[MoviePlayerViewController controller:assetUrl] animated:YES];
+        break;
+        
+    default:
+        break;
+    }
+    
+}
+
 #pragma mark - Private
 
 /**
@@ -192,6 +223,8 @@ typedef enum
 {
     self.videoMode = VideoModeMPMoviePlayer;
     
+    UIViewController* dialog = [AssetsViewController controller:self];
+    [self.navigationController presentModalViewController:dialog animated:YES];
 }
 
 /**
@@ -200,6 +233,9 @@ typedef enum
 - (void)showAVPlayer
 {
     self.videoMode = VideoModeAVPlayer;
+
+    UIViewController* dialog = [AssetsViewController controller:self];
+    [self.navigationController presentModalViewController:dialog animated:YES];
 }
 
 /**

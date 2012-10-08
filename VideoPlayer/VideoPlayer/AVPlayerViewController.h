@@ -13,6 +13,6 @@
  */
 @interface AVPlayerViewController : UIViewController
 
-+ (AVPlayerViewController *)controller;
++ (AVPlayerViewController *)controller:(NSURL *)videoUrl;
 
 @end
