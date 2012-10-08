@@ -252,6 +252,7 @@ typedef enum
 	NSString* dir   = [paths objectAtIndex:0];
     NSArray*  files = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:dir error:nil];
 
+    NSInteger savedCount = 0;
     for( NSString* file in files )
     {
         NSString* extention = [file pathExtension];
@@ -261,8 +262,17 @@ typedef enum
         {
             NSString* path = [dir stringByAppendingPathComponent:file];
             UISaveVideoAtPathToSavedPhotosAlbum( path, nil, nil, nil );
+            savedCount++;
         }
     }
+
+    NSString* message = ( savedCount == 0 ? @"Video file not found." : [NSString stringWithFormat:@"Saved the %d video files.", savedCount] );
+    UIAlertView* alert = [[[UIAlertView alloc] initWithTitle:@"Information"
+                                                     message:message
+                                                    delegate:nil
+                                           cancelButtonTitle:nil
+                                           otherButtonTitles:@"OK", nil] autorelease];
+    [alert show];
 }
 
 @end

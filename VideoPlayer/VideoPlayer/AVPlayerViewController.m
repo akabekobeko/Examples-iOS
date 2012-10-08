@@ -256,13 +256,12 @@ static void* AVPlayerViewControllerStatusObservationContext = &AVPlayerViewContr
     
     if( error != nil )
     {
-        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:[error localizedDescription]
+        UIAlertView* alertView = [[[UIAlertView alloc] initWithTitle:[error localizedDescription]
                                                             message:[error localizedFailureReason]
                                                            delegate:nil
                                                   cancelButtonTitle:@"OK"
-                                                  otherButtonTitles:nil];
+                                                  otherButtonTitles:nil] autorelease];
         [alertView show];
-        [alertView release];
     }
 }
 
