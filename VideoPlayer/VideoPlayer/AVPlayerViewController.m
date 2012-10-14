@@ -99,9 +99,15 @@ static void* AVPlayerViewControllerStatusObservationContext = &AVPlayerViewContr
     layer.videoGravity = AVLayerVideoGravityResizeAspect;
     layer.player       = self.videoPlayer;
 
-	UITapGestureRecognizer* tap = [[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapSingle:)] autorelease];
-	tap.numberOfTapsRequired = 1;
-	[self.videoPlayerView addGestureRecognizer:tap];
+    // シングル タップ
+	UITapGestureRecognizer* tapSingle = [[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapSingle:)] autorelease];
+	tapSingle.numberOfTapsRequired = 1;
+	[self.videoPlayerView addGestureRecognizer:tapSingle];
+
+    // ダブル タップ
+	UITapGestureRecognizer* tapDouble = [[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapDouble:)] autorelease];
+	tapDouble.numberOfTapsRequired = 2;
+	[self.videoPlayerView addGestureRecognizer:tapDouble];
 }
 
 /**
@@ -300,20 +306,6 @@ static void* AVPlayerViewControllerStatusObservationContext = &AVPlayerViewContr
 }
 
 /**
- * View がシングル タップされた時に発生します。
- *
- * @param sender イベント送信元。
- */
-- (void)tapSingle:(UITapGestureRecognizer *)sender
-{
-    const BOOL isHidden = !self.navigationController.navigationBar.hidden;
-    
-	[[UIApplication sharedApplication] setStatusBarHidden:isHidden withAnimation:NO];
-	[self.navigationController setNavigationBarHidden:isHidden animated:YES];
-    [self.playerToolView setHidden:isHidden];
-}
-
-/**
  * 再生位置スライダーを同期します。
  */
 - (void)syncSeekBar
@@ -339,6 +331,31 @@ static void* AVPlayerViewControllerStatusObservationContext = &AVPlayerViewContr
     {
         [self.playButton setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
     }
+}
+
+/**
+ * View がシングル タップされた時に発生します。
+ *
+ * @param sender イベント送信元。
+ */
+- (void)tapSingle:(UITapGestureRecognizer *)sender
+{
+    const BOOL isHidden = !self.navigationController.navigationBar.hidden;
+    
+	[[UIApplication sharedApplication] setStatusBarHidden:isHidden withAnimation:NO];
+	[self.navigationController setNavigationBarHidden:isHidden animated:YES];
+    [self.playerToolView setHidden:isHidden];
+}
+
+/**
+ * View がダブル タップされた時に発生します。
+ *
+ * @param sender イベント送信元。
+ */
+- (void)tapDouble:(UITapGestureRecognizer *)sender
+{
+    AVPlayerLayer* layer = ( AVPlayerLayer* )self.videoPlayerView.layer;
+    layer.videoGravity = ( layer.videoGravity == AVLayerVideoGravityResizeAspect ? AVLayerVideoGravityResizeAspectFill : AVLayerVideoGravityResizeAspect );
 }
 
 /**
