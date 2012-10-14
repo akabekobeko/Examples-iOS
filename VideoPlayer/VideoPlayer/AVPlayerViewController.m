@@ -98,6 +98,10 @@ static void* AVPlayerViewControllerStatusObservationContext = &AVPlayerViewContr
     AVPlayerLayer* layer = ( AVPlayerLayer* )self.videoPlayerView.layer;
     layer.videoGravity = AVLayerVideoGravityResizeAspect;
     layer.player       = self.videoPlayer;
+
+	UITapGestureRecognizer* tap = [[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapSingle:)] autorelease];
+	tap.numberOfTapsRequired = 1;
+	[self.videoPlayerView addGestureRecognizer:tap];
 }
 
 /**
@@ -293,6 +297,20 @@ static void* AVPlayerViewControllerStatusObservationContext = &AVPlayerViewContr
                                                   otherButtonTitles:nil] autorelease];
         [alertView show];
     }
+}
+
+/**
+ * View がシングル タップされた時に発生します。
+ *
+ * @param sender イベント送信元。
+ */
+- (void)tapSingle:(UITapGestureRecognizer *)sender
+{
+    const BOOL isHidden = !self.navigationController.navigationBar.hidden;
+    
+	[[UIApplication sharedApplication] setStatusBarHidden:isHidden withAnimation:NO];
+	[self.navigationController setNavigationBarHidden:isHidden animated:YES];
+    [self.playerToolView setHidden:isHidden];
 }
 
 /**
