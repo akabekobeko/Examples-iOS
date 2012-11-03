@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ * テスト メニュー画面です。
+ */
 @interface ViewController : UIViewController
+
+@property (nonatomic, retain) IBOutlet UITableView* menuTableView; //! メニュー テーブル
+
++ (id)controller;
 
 @end

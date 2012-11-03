@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  CustomAlertView
+
+  Created by Akabeko on 2012/11/03.
+  Copyright (c) 2012年 Akabeko. All rights reserved.
+*/
+
+"OK"     = "OK";
+"CANCEL" = "Cancel";
+
+"ALERT_TYPE_VIEW_TITLE"        = "Various UIAlertView";
+"ALERT_TYPE_BUTTON"            = "UIButton";
+"ALERT_TYPE_BUTTON_MESSAGE"    = "UIButton Alert";
+"ALERT_TYPE_TEXTFIELD"         = "UITextField";
+"ALERT_TYPE_TEXTFIELD_MESSAGE" = "Please enter the text.";
+"ALERT_TYPE_TABLE"             = "UITableView";
+"ALERT_TYPE_TABLE_MESSAGE"     = "Table";
+"ALERT_TYPE_PROGRESS"          = "UIProgressView";
+"ALERT_TYPE_INDICATOR"         = "UIActivityIndicatorView";
+"ALERT_TYPE_INDICATOR_MESSAGE" = "Please wait...";

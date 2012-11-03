@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class ViewController;
-
+/**
+ * アプリケーションのイベントを管理します。
+ */
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
-
-@property (strong, nonatomic) ViewController *viewController;
+@property (nonatomic, retain) UIWindow*               window;               //! メイン ウィンドウ
+@property (nonatomic, retain) UINavigationController* navigationController; //! ナビゲーション
 
 @end
