@@ -117,7 +117,7 @@
  */
 - (id)initWithIndicator:(NSString *)title message:(NSString *)message delegate:(id)aDelegate button:(NSString *)button
 {
-	self = [[CustomAlertView alloc] initWithButton:title message:message delegate:aDelegate button:button];
+	self = [self initWithButton:title message:message delegate:aDelegate button:button];
 	if( self )
 	{
 		self.innerIndicator = [[[UIActivityIndicatorView alloc] initWithFrame:CGRectMake( 125, 80, 30, 30 )] autorelease];
@@ -141,7 +141,7 @@
 - (id)initWithProgress:(NSString *)title delegate:(id)aDelegate button:(NSString *)button
 {
 	NSString* message = [NSString stringWithFormat:PROGRESS_MESSAGE, 0, 0];
-	self = [[CustomAlertView alloc] initWithButton:title message:message delegate:aDelegate button:button];
+	self = [self initWithButton:title message:message delegate:aDelegate button:button];
 	if( self )
 	{
 		self.innerProgress = [[[UIProgressView alloc] initWithFrame:CGRectMake( 12, 80, 260, 30 )] autorelease];
@@ -164,7 +164,7 @@
  */
 - (id)initWithTable:(NSString *)title message:(NSString *)message delegate:(id)aDelegate tableSource:(id<UITableViewDataSource>)tableSource tableDelegate:(id<UITableViewDelegate>)tableDelegate button:(NSString *)button
 {
-	self = [[CustomAlertView alloc] initWithButton:title message:message delegate:aDelegate button:button];
+	self = [self initWithButton:title message:message delegate:aDelegate button:button];
 	if( self )
 	{
 		self.innerTable = [[[UITableView alloc] initWithFrame:CGRectMake( 12 , 80, 260, 200 ) style:UITableViewStylePlain] autorelease];
@@ -191,7 +191,7 @@
  */
 - (id)initWithTextField:(NSString *)title message:(NSString *)message delegate:(id)aDelegate textDelegate:(id<UITextFieldDelegate>)textDelegate placeholder:(NSString*)placeholder button:(NSString *)button
 {
-    self = [[CustomAlertView alloc] initWithButton:title message:message delegate:aDelegate button:button];
+    self = [self initWithButton:title message:message delegate:aDelegate button:button];
     if( self )
     {
         self.innerTextField = [[[UITextField alloc] initWithFrame:CGRectMake( 12, 80, 260, 31 )] autorelease];
