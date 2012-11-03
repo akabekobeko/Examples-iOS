@@ -4,7 +4,10 @@
 ### XCode ###
 *.xcodeproj/*
 !*.xcodeproj/project.pbxproj
- 
+
+*.xcworkspace/*
+!*.xcworkspace/contents.xcworkspacedata
+
 *.pbxuser
 *.perspective
 *.perspectivev3
