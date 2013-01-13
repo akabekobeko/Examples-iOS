@@ -1,0 +1,313 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		164235C416A3083700650F51 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 164235C316A3083700650F51 /* UIKit.framework */; };
+		164235C616A3083700650F51 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 164235C516A3083700650F51 /* Foundation.framework */; };
+		164235C816A3083700650F51 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 164235C716A3083700650F51 /* CoreGraphics.framework */; };
+		164235CE16A3083700650F51 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 164235CC16A3083700650F51 /* InfoPlist.strings */; };
+		164235D016A3083700650F51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 164235CF16A3083700650F51 /* main.m */; };
+		164235D416A3083700650F51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 164235D316A3083700650F51 /* AppDelegate.m */; };
+		164235D616A3083700650F51 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 164235D516A3083700650F51 /* Default.png */; };
+		164235D816A3083700650F51 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 164235D716A3083700650F51 /* Default@2x.png */; };
+		164235DA16A3083700650F51 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 164235D916A3083700650F51 /* Default-568h@2x.png */; };
+		164235DD16A3083700650F51 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 164235DC16A3083700650F51 /* ViewController.m */; };
+		164235E016A3083700650F51 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 164235DE16A3083700650F51 /* ViewController.xib */; };
+		164235E916A30BF800650F51 /* penna.otf in Resources */ = {isa = PBXBuildFile; fileRef = 164235E716A30BF800650F51 /* penna.otf */; };
+		164235EA16A30BF800650F51 /* Seshat.otf in Resources */ = {isa = PBXBuildFile; fileRef = 164235E816A30BF800650F51 /* Seshat.otf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		164235BF16A3083700650F51 /* FontEmbed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FontEmbed.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		164235C316A3083700650F51 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		164235C516A3083700650F51 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		164235C716A3083700650F51 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		164235CB16A3083700650F51 /* FontEmbed-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FontEmbed-Info.plist"; sourceTree = "<group>"; };
+		164235CD16A3083700650F51 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		164235CF16A3083700650F51 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		164235D116A3083700650F51 /* FontEmbed-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FontEmbed-Prefix.pch"; sourceTree = "<group>"; };
+		164235D216A3083700650F51 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		164235D316A3083700650F51 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		164235D516A3083700650F51 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		164235D716A3083700650F51 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		164235D916A3083700650F51 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		164235DB16A3083700650F51 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		164235DC16A3083700650F51 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		164235DF16A3083700650F51 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		164235E716A30BF800650F51 /* penna.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = penna.otf; path = fonts/penna.otf; sourceTree = "<group>"; };
+		164235E816A30BF800650F51 /* Seshat.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Seshat.otf; path = fonts/Seshat.otf; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		164235BC16A3083700650F51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				164235C416A3083700650F51 /* UIKit.framework in Frameworks */,
+				164235C616A3083700650F51 /* Foundation.framework in Frameworks */,
+				164235C816A3083700650F51 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		164235B416A3083700650F51 = {
+			isa = PBXGroup;
+			children = (
+				164235C916A3083700650F51 /* FontEmbed */,
+				164235C216A3083700650F51 /* Frameworks */,
+				164235C016A3083700650F51 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		164235C016A3083700650F51 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				164235BF16A3083700650F51 /* FontEmbed.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		164235C216A3083700650F51 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				164235C316A3083700650F51 /* UIKit.framework */,
+				164235C516A3083700650F51 /* Foundation.framework */,
+				164235C716A3083700650F51 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		164235C916A3083700650F51 /* FontEmbed */ = {
+			isa = PBXGroup;
+			children = (
+				164235D216A3083700650F51 /* AppDelegate.h */,
+				164235D316A3083700650F51 /* AppDelegate.m */,
+				164235DB16A3083700650F51 /* ViewController.h */,
+				164235DC16A3083700650F51 /* ViewController.m */,
+				164235DE16A3083700650F51 /* ViewController.xib */,
+				164235CA16A3083700650F51 /* Supporting Files */,
+			);
+			path = FontEmbed;
+			sourceTree = "<group>";
+		};
+		164235CA16A3083700650F51 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				164235E616A30BE900650F51 /* fonts */,
+				164235CB16A3083700650F51 /* FontEmbed-Info.plist */,
+				164235CC16A3083700650F51 /* InfoPlist.strings */,
+				164235CF16A3083700650F51 /* main.m */,
+				164235D116A3083700650F51 /* FontEmbed-Prefix.pch */,
+				164235D516A3083700650F51 /* Default.png */,
+				164235D716A3083700650F51 /* Default@2x.png */,
+				164235D916A3083700650F51 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		164235E616A30BE900650F51 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				164235E716A30BF800650F51 /* penna.otf */,
+				164235E816A30BF800650F51 /* Seshat.otf */,
+			);
+			name = fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		164235BE16A3083700650F51 /* FontEmbed */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 164235E316A3083700650F51 /* Build configuration list for PBXNativeTarget "FontEmbed" */;
+			buildPhases = (
+				164235BB16A3083700650F51 /* Sources */,
+				164235BC16A3083700650F51 /* Frameworks */,
+				164235BD16A3083700650F51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FontEmbed;
+			productName = FontEmbed;
+			productReference = 164235BF16A3083700650F51 /* FontEmbed.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		164235B616A3083700650F51 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = Akabeko;
+			};
+			buildConfigurationList = 164235B916A3083700650F51 /* Build configuration list for PBXProject "FontEmbed" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 164235B416A3083700650F51;
+			productRefGroup = 164235C016A3083700650F51 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				164235BE16A3083700650F51 /* FontEmbed */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		164235BD16A3083700650F51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				164235CE16A3083700650F51 /* InfoPlist.strings in Resources */,
+				164235D616A3083700650F51 /* Default.png in Resources */,
+				164235D816A3083700650F51 /* Default@2x.png in Resources */,
+				164235DA16A3083700650F51 /* Default-568h@2x.png in Resources */,
+				164235E016A3083700650F51 /* ViewController.xib in Resources */,
+				164235E916A30BF800650F51 /* penna.otf in Resources */,
+				164235EA16A30BF800650F51 /* Seshat.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		164235BB16A3083700650F51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				164235D016A3083700650F51 /* main.m in Sources */,
+				164235D416A3083700650F51 /* AppDelegate.m in Sources */,
+				164235DD16A3083700650F51 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		164235CC16A3083700650F51 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				164235CD16A3083700650F51 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		164235DE16A3083700650F51 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				164235DF16A3083700650F51 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		164235E116A3083700650F51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		164235E216A3083700650F51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		164235E416A3083700650F51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FontEmbed/FontEmbed-Prefix.pch";
+				INFOPLIST_FILE = "FontEmbed/FontEmbed-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		164235E516A3083700650F51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FontEmbed/FontEmbed-Prefix.pch";
+				INFOPLIST_FILE = "FontEmbed/FontEmbed-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		164235B916A3083700650F51 /* Build configuration list for PBXProject "FontEmbed" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				164235E116A3083700650F51 /* Debug */,
+				164235E216A3083700650F51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		164235E316A3083700650F51 /* Build configuration list for PBXNativeTarget "FontEmbed" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				164235E416A3083700650F51 /* Debug */,
+				164235E516A3083700650F51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 164235B616A3083700650F51 /* Project object */;
+}
