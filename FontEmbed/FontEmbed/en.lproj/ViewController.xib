@@ -80,9 +80,9 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<string key="IBUIText">The quick brown fox jumps over the lazy dog</string>
-						<object class="NSColor" key="IBUITextColor">
+						<object class="NSColor" key="IBUITextColor" id="990005979">
 							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC4yMzY2ODE0MjA2IDAgMAA</bytes>
+							<bytes key="NSRGB">MCAwLjUwMTk2MDgxNCAxAA</bytes>
 						</object>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">0</int>
@@ -137,10 +137,7 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<string key="IBUIText">The quick brown fox jumps over the lazy dog</string>
-						<object class="NSColor" key="IBUITextColor">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC4yMzY2ODE0MjA2IDAgMAA</bytes>
-						</object>
+						<reference key="IBUITextColor" ref="990005979"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">0</int>
 						<int key="IBUINumberOfLines">2</int>
@@ -186,10 +183,7 @@
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<string key="IBUIText">The quick brown fox jumps over the lazy dog</string>
-						<object class="NSColor" key="IBUITextColor">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC4yMzY2ODE0MjA2IDAgMAA</bytes>
-						</object>
+						<reference key="IBUITextColor" ref="990005979"/>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">0</int>
 						<int key="IBUINumberOfLines">2</int>
@@ -285,12 +279,12 @@
 						<int key="objectID">6</int>
 						<reference key="object" ref="774585933"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="586291810"/>
-							<reference ref="333541731"/>
 							<reference ref="158621414"/>
 							<reference ref="532736537"/>
 							<reference ref="270522507"/>
 							<reference ref="752899845"/>
+							<reference ref="333541731"/>
+							<reference ref="586291810"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>

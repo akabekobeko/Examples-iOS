@@ -46,9 +46,10 @@
 {
     [super viewDidLoad];
     
-    [self setTitle:@"Custom Fonts"];
-    [self.fontSampleLabelPenna  setFont:[UIFont fontWithName:@"Penna"  size:17]];    
-    [self.fontSampleLabelSeshat setFont:[UIFont fontWithName:@"Seshat" size:17]];
+    [self setTitle:@"Embed Fonts"];
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Icon"]]];
+    [self.fontSampleLabelPenna  setFont:[UIFont fontWithName:@"Penna"  size:20]];
+    [self.fontSampleLabelSeshat setFont:[UIFont fontWithName:@"Seshat" size:20]];
 }
 
 @end
