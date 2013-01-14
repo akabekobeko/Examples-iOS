@@ -14,16 +14,34 @@
 
 @implementation ViewController
 
+#pragma mark - Lifecycle
+
+/**
+ * インスタンスを生成します。
+ *
+ * @return インスタンス。
+ */
++ (id)controller
+{
+    return [[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] autorelease];
+}
+
+/**
+ * インスタンスを破棄します。
+ */
+- (void)dealloc
+{    
+    [super dealloc];
+}
+
+#pragma mark - Views
+
+/**
+ * 画面が読み込まれた時に発生します。
+ */
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
