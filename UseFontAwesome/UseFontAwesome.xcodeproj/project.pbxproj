@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16E0420917887DB4008D98DA /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 16E0420817887DB4008D98DA /* FontAwesome.otf */; };
 		16F363E9178872CF009FC765 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F363E8178872CF009FC765 /* UIKit.framework */; };
 		16F363EB178872CF009FC765 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F363EA178872CF009FC765 /* Foundation.framework */; };
 		16F363ED178872CF009FC765 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F363EC178872CF009FC765 /* CoreGraphics.framework */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16E0420817887DB4008D98DA /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.otf; path = res/FontAwesome.otf; sourceTree = "<group>"; };
 		16F363E5178872CF009FC765 /* UseFontAwesome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UseFontAwesome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16F363E8178872CF009FC765 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		16F363EA178872CF009FC765 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -53,6 +55,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16E0420A17887DBD008D98DA /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				16F363FA178872CF009FC765 /* Default.png */,
+				16F363FC178872CF009FC765 /* Default@2x.png */,
+				16F363FE178872CF009FC765 /* Default-568h@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		16E0420B17887E02008D98DA /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				16E0420817887DB4008D98DA /* FontAwesome.otf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		16F363DC178872CF009FC765 = {
 			isa = PBXGroup;
 			children = (
@@ -96,13 +116,12 @@
 		16F363EF178872CF009FC765 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				16E0420B17887E02008D98DA /* Fonts */,
+				16E0420A17887DBD008D98DA /* Images */,
 				16F363F0178872CF009FC765 /* UseFontAwesome-Info.plist */,
 				16F363F1178872CF009FC765 /* InfoPlist.strings */,
 				16F363F4178872CF009FC765 /* main.m */,
 				16F363F6178872CF009FC765 /* UseFontAwesome-Prefix.pch */,
-				16F363FA178872CF009FC765 /* Default.png */,
-				16F363FC178872CF009FC765 /* Default@2x.png */,
-				16F363FE178872CF009FC765 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -163,6 +182,7 @@
 				16F363FD178872CF009FC765 /* Default@2x.png in Resources */,
 				16F363FF178872CF009FC765 /* Default-568h@2x.png in Resources */,
 				16F36405178872CF009FC765 /* TopViewController.xib in Resources */,
+				16E0420917887DB4008D98DA /* FontAwesome.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +320,7 @@
 				16F3640A178872CF009FC765 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
