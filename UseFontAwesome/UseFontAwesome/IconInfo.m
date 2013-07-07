@@ -22,7 +22,7 @@
     self = [super init];
     if( self )
     {
-        _icon    = [[NSString alloc] initWithCharacters:&unicode length:1];
+        _icon    = [IconInfo stringWithUnicode:unicode];
         _unicode = unicode;
     }
 
@@ -39,6 +39,18 @@
 + (id)iconInfo:(UniChar)unicode
 {
     return [[IconInfo alloc] init:unicode];
+}
+
+/**
+ * UNICODE の値から文字を取得します。
+ *
+ * @param unicode UNICODE の値。
+ *
+ * @return 文字。
+ */
++ (NSString *)stringWithUnicode:(UniChar)unicode
+{
+    return [[NSString alloc] initWithCharacters:&unicode length:1];
 }
 
 @end

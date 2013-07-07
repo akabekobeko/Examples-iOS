@@ -8,9 +8,11 @@
 
 #import "TopViewController.h"
 #import "IconListViewController.h"
+#import "IconWithControlsViewController.h"
 
-#define MENU_ROW_ICON_LIST 0
-#define MENU_ROW_COUNT     1
+#define MENU_ROW_ICON_LIST          0
+#define MENU_ROW_ICON_WITH_CONTROLS 1
+#define MENU_ROW_COUNT              2
 
 @interface TopViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -91,6 +93,10 @@
         cell.textLabel.text = @"Icon list";
         break;
 
+    case MENU_ROW_ICON_WITH_CONTROLS:
+        cell.textLabel.text = @"Icon with controls";
+        break;
+
     default:
         break;
     }
@@ -113,6 +119,11 @@
     case MENU_ROW_ICON_LIST:
         self.navigationItem.backBarButtonItem = [self backButton];
         [self.navigationController pushViewController:[IconListViewController viewController] animated:YES];
+        break;
+
+    case MENU_ROW_ICON_WITH_CONTROLS:
+        self.navigationItem.backBarButtonItem = [self backButton];
+        [self.navigationController pushViewController:[IconWithControlsViewController viewController] animated:YES];
         break;
 
     default:

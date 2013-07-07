@@ -20,5 +20,6 @@
 @property (readonly, nonatomic) UniChar unicode;
 
 + (id)iconInfo:(UniChar)unicode;
++ (NSString *)stringWithUnicode:(UniChar)unicode;
 
 @end
