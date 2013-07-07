@@ -7,6 +7,7 @@
 //
 
 #import "TopViewController.h"
+#import "IconListViewController.h"
 
 #define MENU_ROW_ICON_LIST 0
 #define MENU_ROW_COUNT     1
@@ -54,12 +55,12 @@
 #pragma mark - UITableViewDataSource
 
 /**
- * 指定されたセクションにおける行の数を取得します。
+ * 指定セクションにおける行数を取得します。
  *
  * @param tableView テーブル。
  * @param section   セクション。
  *
- * @return 行の数。
+ * @return 行数。
  */
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -110,11 +111,23 @@
     switch( indexPath.row )
     {
     case MENU_ROW_ICON_LIST:
+        self.navigationItem.backBarButtonItem = [self backButton];
+        [self.navigationController pushViewController:[IconListViewController viewController] animated:YES];
         break;
 
     default:
         break;
     }
+}
+
+/**
+ * 戻るボタンを生成します。
+ *
+ * @return 戻るボタン。
+ */
+- (UIBarButtonItem *)backButton
+{
+    return [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil];
 }
 
 @end
