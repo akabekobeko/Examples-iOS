@@ -12,6 +12,8 @@
 		1630A2A1178920E000FE6190 /* IconInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1630A2A0178920E000FE6190 /* IconInfo.m */; };
 		1630A2A517892BDD00FE6190 /* IconListCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1630A2A317892BDD00FE6190 /* IconListCellViewController.m */; };
 		1630A2A617892BDD00FE6190 /* IconListCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1630A2A417892BDD00FE6190 /* IconListCellViewController.xib */; };
+		1630A2A817894E7900FE6190 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1630A2A717894E7900FE6190 /* Icon.png */; };
+		1630A2AA17894E7D00FE6190 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1630A2A917894E7D00FE6190 /* Icon@2x.png */; };
 		16E0420917887DB4008D98DA /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 16E0420817887DB4008D98DA /* FontAwesome.otf */; };
 		16F363E9178872CF009FC765 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F363E8178872CF009FC765 /* UIKit.framework */; };
 		16F363EB178872CF009FC765 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F363EA178872CF009FC765 /* Foundation.framework */; };
@@ -35,6 +37,8 @@
 		1630A2A217892BDD00FE6190 /* IconListCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconListCellViewController.h; sourceTree = "<group>"; };
 		1630A2A317892BDD00FE6190 /* IconListCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconListCellViewController.m; sourceTree = "<group>"; };
 		1630A2A417892BDD00FE6190 /* IconListCellViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IconListCellViewController.xib; sourceTree = "<group>"; };
+		1630A2A717894E7900FE6190 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = res/Icon.png; sourceTree = "<group>"; };
+		1630A2A917894E7D00FE6190 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "res/Icon@2x.png"; sourceTree = "<group>"; };
 		16E0420817887DB4008D98DA /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.otf; path = res/FontAwesome.otf; sourceTree = "<group>"; };
 		16F363E5178872CF009FC765 /* UseFontAwesome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UseFontAwesome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16F363E8178872CF009FC765 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -96,6 +100,8 @@
 		16E0420A17887DBD008D98DA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				1630A2A717894E7900FE6190 /* Icon.png */,
+				1630A2A917894E7D00FE6190 /* Icon@2x.png */,
 				16F363FA178872CF009FC765 /* Default.png */,
 				16F363FC178872CF009FC765 /* Default@2x.png */,
 				16F363FE178872CF009FC765 /* Default-568h@2x.png */,
@@ -222,6 +228,8 @@
 				16E0420917887DB4008D98DA /* FontAwesome.otf in Resources */,
 				1630A29717891A0E00FE6190 /* IconListViewController.xib in Resources */,
 				1630A2A617892BDD00FE6190 /* IconListCellViewController.xib in Resources */,
+				1630A2A817894E7900FE6190 /* Icon.png in Resources */,
+				1630A2AA17894E7D00FE6190 /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
