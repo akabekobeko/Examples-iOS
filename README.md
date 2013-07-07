@@ -4,13 +4,13 @@
 
 The repository has published a sample project for iOS.
 
-* *[Redmine - Exsamples-iOS](http://akabeko.me/projects/projects/exsamples-ios "Redmine - Exsamples-iOS")*
+* *[Redmine - Examples-iOS](http://akabeko.me/projects/projects/exsamples-ios "Redmine - Examples-iOS")*
 
 ## License
 
 The MIT License (MIT)
 
-Copyright (c) 2012 Akabeko
+Copyright (c) 2012 - 2013 Akabeko
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

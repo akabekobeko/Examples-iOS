@@ -4,13 +4,13 @@
 
 iOS のサンプル プロジェクトをまとめたリポジトリです。
 
-* *[Redmine - Exsamples-iOS](http://akabeko.me/projects/projects/exsamples-ios "Redmine - Exsamples-iOS")*
+* *[Redmine - Examples-iOS](http://akabeko.me/projects/projects/exsamples-ios "Redmine - Examples-iOS")*
 
 ## ライセンス
 
 The MIT License
 
-Copyright (c) 2012 アカベコ
+Copyright (c) 2012 - 2013 アカベコ
 
 以下に定める条件に従い、本ソフトウェアおよび関連文書のファイル（以下「ソフトウェア」）の複製を取得するすべての人に対し、ソフトウェアを無制限に扱うことを無償で許可します。これには、ソフトウェアの複製を使用、複写、変更、結合、掲載、頒布、サブライセンス、および/または販売する権利、およびソフトウェアを提供する相手に同じことを許可する権利も無制限に含まれます。
 
