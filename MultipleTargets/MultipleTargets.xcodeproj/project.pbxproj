@@ -20,6 +20,19 @@
 		165689D31791991D00A39702 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 165689D21791991D00A39702 /* Icon@2x.png */; };
 		165689D517919AEB00A39702 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 165689D417919AEB00A39702 /* InfoPlist.strings */; };
 		165689D717919AFA00A39702 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 165689D617919AFA00A39702 /* ViewController.xib */; };
+		165689DA1791A70800A39702 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 165689B81791985D00A39702 /* main.m */; };
+		165689DB1791A70800A39702 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 165689BC1791985D00A39702 /* AppDelegate.m */; };
+		165689DC1791A70800A39702 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 165689C51791985D00A39702 /* ViewController.m */; };
+		165689DE1791A70800A39702 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 165689AC1791985D00A39702 /* UIKit.framework */; };
+		165689DF1791A70800A39702 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 165689AE1791985D00A39702 /* Foundation.framework */; };
+		165689E01791A70800A39702 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 165689B01791985D00A39702 /* CoreGraphics.framework */; };
+		165689E21791A70800A39702 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 165689BE1791985D00A39702 /* Default.png */; };
+		165689E31791A70800A39702 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 165689C01791985D00A39702 /* Default@2x.png */; };
+		165689E41791A70800A39702 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 165689C21791985D00A39702 /* Default-568h@2x.png */; };
+		165689E51791A70800A39702 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 165689D01791991600A39702 /* Icon.png */; };
+		165689E61791A70800A39702 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 165689D21791991D00A39702 /* Icon@2x.png */; };
+		165689E71791A70800A39702 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 165689D417919AEB00A39702 /* InfoPlist.strings */; };
+		165689E81791A70800A39702 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 165689D617919AFA00A39702 /* ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +54,8 @@
 		165689D21791991D00A39702 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "res/Icon@2x.png"; sourceTree = "<group>"; };
 		165689D417919AEB00A39702 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = res/InfoPlist.strings; sourceTree = "<group>"; };
 		165689D617919AFA00A39702 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		165689EC1791A70800A39702 /* MultipleTargets-Sub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MultipleTargets-Sub.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		165689ED1791A70800A39702 /* MultipleTargets-Sub-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MultipleTargets-Sub-Info.plist"; path = "/Users/akabeko/Documents/dev/app/Xcode/samples/Examples-iOS/MultipleTargets/MultipleTargets-Sub-Info.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +66,16 @@
 				165689AD1791985D00A39702 /* UIKit.framework in Frameworks */,
 				165689AF1791985D00A39702 /* Foundation.framework in Frameworks */,
 				165689B11791985D00A39702 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		165689DD1791A70800A39702 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				165689DE1791A70800A39702 /* UIKit.framework in Frameworks */,
+				165689DF1791A70800A39702 /* Foundation.framework in Frameworks */,
+				165689E01791A70800A39702 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				165689A91791985D00A39702 /* MultipleTargets.app */,
+				165689EC1791A70800A39702 /* MultipleTargets-Sub.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,6 +128,7 @@
 			children = (
 				165689CF179198C200A39702 /* res */,
 				165689B41791985D00A39702 /* MultipleTargets-Info.plist */,
+				165689ED1791A70800A39702 /* MultipleTargets-Sub-Info.plist */,
 				165689B81791985D00A39702 /* main.m */,
 				165689BA1791985D00A39702 /* MultipleTargets-Prefix.pch */,
 			);
@@ -141,6 +168,23 @@
 			productReference = 165689A91791985D00A39702 /* MultipleTargets.app */;
 			productType = "com.apple.product-type.application";
 		};
+		165689D81791A70800A39702 /* MultipleTargets-Sub */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 165689E91791A70800A39702 /* Build configuration list for PBXNativeTarget "MultipleTargets-Sub" */;
+			buildPhases = (
+				165689D91791A70800A39702 /* Sources */,
+				165689DD1791A70800A39702 /* Frameworks */,
+				165689E11791A70800A39702 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MultipleTargets-Sub";
+			productName = MultipleTargets;
+			productReference = 165689EC1791A70800A39702 /* MultipleTargets-Sub.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -163,6 +207,7 @@
 			projectRoot = "";
 			targets = (
 				165689A81791985C00A39702 /* MultipleTargets */,
+				165689D81791A70800A39702 /* MultipleTargets-Sub */,
 			);
 		};
 /* End PBXProject section */
@@ -182,6 +227,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		165689E11791A70800A39702 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				165689E21791A70800A39702 /* Default.png in Resources */,
+				165689E31791A70800A39702 /* Default@2x.png in Resources */,
+				165689E41791A70800A39702 /* Default-568h@2x.png in Resources */,
+				165689E51791A70800A39702 /* Icon.png in Resources */,
+				165689E61791A70800A39702 /* Icon@2x.png in Resources */,
+				165689E71791A70800A39702 /* InfoPlist.strings in Resources */,
+				165689E81791A70800A39702 /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -192,6 +251,16 @@
 				165689B91791985D00A39702 /* main.m in Sources */,
 				165689BD1791985D00A39702 /* AppDelegate.m in Sources */,
 				165689C61791985D00A39702 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		165689D91791A70800A39702 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				165689DA1791A70800A39702 /* main.m in Sources */,
+				165689DB1791A70800A39702 /* AppDelegate.m in Sources */,
+				165689DC1791A70800A39702 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +347,30 @@
 			};
 			name = Release;
 		};
+		165689EA1791A70800A39702 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MultipleTargets/MultipleTargets-Prefix.pch";
+				INFOPLIST_FILE = "MultipleTargets-Sub-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "MultipleTargets-Sub";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		165689EB1791A70800A39702 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MultipleTargets/MultipleTargets-Prefix.pch";
+				INFOPLIST_FILE = "MultipleTargets-Sub-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "MultipleTargets-Sub";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -295,6 +388,15 @@
 			buildConfigurations = (
 				165689CD1791985D00A39702 /* Debug */,
 				165689CE1791985D00A39702 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		165689E91791A70800A39702 /* Build configuration list for PBXNativeTarget "MultipleTargets-Sub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				165689EA1791A70800A39702 /* Debug */,
+				165689EB1791A70800A39702 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
