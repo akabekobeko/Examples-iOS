@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ * メイン画面です。
+ */
 @interface ViewController : UIViewController
+
++ (id)viewController;
 
 @end

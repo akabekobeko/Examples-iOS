@@ -8,22 +8,24 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
-
-@end
-
 @implementation ViewController
 
+/**
+ * インスタンスを生成します。
+ *
+ * @return インスタンス。
+ */
++ (id)viewController
+{
+    return [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+}
+
+/**
+ * 画面が読み込まれる時に発生します。
+ */
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
