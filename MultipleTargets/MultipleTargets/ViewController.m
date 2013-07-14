@@ -27,7 +27,8 @@
 {
     [super viewDidLoad];
 
-    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]]];
+    self.title                = LTEXT( @"TOP_TITLE" );
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
 }
 
 @end
