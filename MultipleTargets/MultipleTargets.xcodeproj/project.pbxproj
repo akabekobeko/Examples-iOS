@@ -33,6 +33,10 @@
 		165689E61791A70800A39702 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 165689D21791991D00A39702 /* Icon@2x.png */; };
 		165689E71791A70800A39702 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 165689D417919AEB00A39702 /* InfoPlist.strings */; };
 		165689E81791A70800A39702 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 165689D617919AFA00A39702 /* ViewController.xib */; };
+		16DFF25017927E6400D874F8 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 16DFF24F17927E6400D874F8 /* background.png */; };
+		16DFF25117927E6900D874F8 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 16DFF24F17927E6400D874F8 /* background.png */; };
+		16DFF2531792827D00D874F8 /* picture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16DFF2521792827D00D874F8 /* picture.jpg */; };
+		16DFF256179282E200D874F8 /* picture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 16DFF2541792828A00D874F8 /* picture.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +60,9 @@
 		165689D617919AFA00A39702 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		165689EC1791A70800A39702 /* MultipleTargets-Sub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MultipleTargets-Sub.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		165689ED1791A70800A39702 /* MultipleTargets-Sub-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MultipleTargets-Sub-Info.plist"; path = "/Users/akabeko/Documents/dev/app/Xcode/samples/Examples-iOS/MultipleTargets/MultipleTargets-Sub-Info.plist"; sourceTree = "<absolute>"; };
+		16DFF24F17927E6400D874F8 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = res/background.png; sourceTree = "<group>"; };
+		16DFF2521792827D00D874F8 /* picture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = picture.jpg; path = res/Original/picture.jpg; sourceTree = "<group>"; };
+		16DFF2541792828A00D874F8 /* picture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = picture.jpg; path = res/Sub/picture.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +145,9 @@
 		165689CF179198C200A39702 /* res */ = {
 			isa = PBXGroup;
 			children = (
+				16DFF24F17927E6400D874F8 /* background.png */,
+				16DFF24D17927E3000D874F8 /* Original */,
+				16DFF24E17927E3800D874F8 /* Sub */,
 				165689D417919AEB00A39702 /* InfoPlist.strings */,
 				165689D01791991600A39702 /* Icon.png */,
 				165689D21791991D00A39702 /* Icon@2x.png */,
@@ -146,6 +156,22 @@
 				165689C21791985D00A39702 /* Default-568h@2x.png */,
 			);
 			name = res;
+			sourceTree = "<group>";
+		};
+		16DFF24D17927E3000D874F8 /* Original */ = {
+			isa = PBXGroup;
+			children = (
+				16DFF2521792827D00D874F8 /* picture.jpg */,
+			);
+			name = Original;
+			sourceTree = "<group>";
+		};
+		16DFF24E17927E3800D874F8 /* Sub */ = {
+			isa = PBXGroup;
+			children = (
+				16DFF2541792828A00D874F8 /* picture.jpg */,
+			);
+			name = Sub;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +250,8 @@
 				165689D31791991D00A39702 /* Icon@2x.png in Resources */,
 				165689D517919AEB00A39702 /* InfoPlist.strings in Resources */,
 				165689D717919AFA00A39702 /* ViewController.xib in Resources */,
+				16DFF25017927E6400D874F8 /* background.png in Resources */,
+				16DFF2531792827D00D874F8 /* picture.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +266,8 @@
 				165689E61791A70800A39702 /* Icon@2x.png in Resources */,
 				165689E71791A70800A39702 /* InfoPlist.strings in Resources */,
 				165689E81791A70800A39702 /* ViewController.xib in Resources */,
+				16DFF25117927E6900D874F8 /* background.png in Resources */,
+				16DFF256179282E200D874F8 /* picture.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
