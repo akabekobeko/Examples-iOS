@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  WebView
+
+  Created by akabeko on 2014/01/05.
+  Copyright (c) 2014年 akabeko. All rights reserved.
+*/
+
+"UIWebView Coordination" = "UIWebView 連携";
+"Basic Coordination"     = "基本的な連携";
+"Google Maps API"        = "Google Maps API 連携";
