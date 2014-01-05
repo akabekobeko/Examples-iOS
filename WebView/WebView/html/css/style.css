@@ -16,10 +16,20 @@ h2 {
     border-bottom: solid 1px #34495e;
 }
 
-.from-app-text {
+.to-application-text {
     margin: 1em 2em;
-    background-color: #34495e;
+    background-color: #3498db;
     border-radius: .2em;
     color: #fff;
     padding: 1em;
+    text-align: center;
+}
+
+.from-app-text {
+    margin: 1em 2em;
+    background-color: #8e44ad;
+    border-radius: .2em;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
 }

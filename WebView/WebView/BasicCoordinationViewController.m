@@ -72,6 +72,38 @@
     DLOG( @"Basic Coordination: Finish load" );
 }
 
+/**
+ * UIWebView 上でリクエストによるページ遷移が開始された時に発生します。
+ *
+ * @param webView        対象となる UIWebView。
+ * @param request        リクエスト。
+ * @param navigationType ページ遷移の起点となった操作種別。
+ *
+ * @return ページ遷移を継続する場合は YES。キャンセルするなら NO。
+ */
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+{
+    static NSString* const callbackProtocol = @"app-callback://";
+    
+    // アプリへのコールバックなら、その内容を表示
+    NSString* url = [[request URL] absoluteString];
+    if( [url hasPrefix:callbackProtocol] )
+    {
+        NSString* message = [url substringFromIndex:[callbackProtocol length]];
+
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:LTEXT( @"From UIWebView" )
+                                                        message:message
+                                                       delegate:nil
+                                              cancelButtonTitle:nil
+                                              otherButtonTitles:@"OK", nil];
+        [alert show];
+
+        return NO;
+    }
+
+    return YES;
+}
+
 #pragma mark - Private
 
 /**
