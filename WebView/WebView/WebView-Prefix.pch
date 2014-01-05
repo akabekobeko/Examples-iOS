@@ -15,4 +15,12 @@
     #import <Foundation/Foundation.h>
 #endif
 
+// Debug only log
+#ifdef DEBUG
+    #define DLOG(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+    #define DLOG(...)
+#endif
+
+// Load localizable string
 #define LTEXT(res) NSLocalizedString(res, res)

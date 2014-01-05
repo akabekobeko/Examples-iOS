@@ -8,7 +8,7 @@
 
 #import "GoogleMapsViewController.h"
 
-@interface GoogleMapsViewController ()
+@interface GoogleMapsViewController () <UIWebViewDelegate>
 
 @end
 

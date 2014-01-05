@@ -13,4 +13,7 @@
  */
 @interface GoogleMapsViewController : UIViewController
 
+/** Web ページ。 */
+@property (weak, nonatomic) IBOutlet UIWebView* webView;
+
 @end

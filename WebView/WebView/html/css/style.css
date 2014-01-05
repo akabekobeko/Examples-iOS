@@ -1,0 +1,25 @@
+
+body, html {
+    width: 100%;
+    background-color: #ecf0f1;
+    padding: 0;
+    margin: 0;
+    color: #2c3e50;
+}
+
+h1 {
+    margin: .5em;
+}
+
+h2 {
+    margin: 1em;
+    border-bottom: solid 1px #34495e;
+}
+
+.from-app-text {
+    margin: 1em 2em;
+    background-color: #34495e;
+    border-radius: .2em;
+    color: #fff;
+    padding: 1em;
+}

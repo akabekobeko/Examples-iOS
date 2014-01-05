@@ -13,4 +13,10 @@
  */
 @interface BasicCoordinationViewController : UIViewController
 
+/** Web ページに送信するテキスト入力欄。 */
+@property (weak, nonatomic) IBOutlet UITextField* textField;
+
+/** Web ページ。 */
+@property (weak, nonatomic) IBOutlet UIWebView* webView;
+
 @end

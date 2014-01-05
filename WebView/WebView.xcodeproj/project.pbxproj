@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16D143521879323D007058C3 /* html in Resources */ = {isa = PBXBuildFile; fileRef = 16D143511879323D007058C3 /* html */; };
 		16F3F65C187864100073EB21 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F3F65B187864100073EB21 /* Foundation.framework */; };
 		16F3F65E187864100073EB21 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F3F65D187864100073EB21 /* CoreGraphics.framework */; };
 		16F3F660187864100073EB21 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16F3F65F187864100073EB21 /* UIKit.framework */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16D143511879323D007058C3 /* html */ = {isa = PBXFileReference; lastKnownFileType = folder; path = html; sourceTree = "<group>"; };
 		16F3F658187864100073EB21 /* WebView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16F3F65B187864100073EB21 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		16F3F65D187864100073EB21 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,8 +55,8 @@
 		16F3F67A187864100073EB21 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		16F3F682187864100073EB21 /* WebViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WebViewTests-Info.plist"; sourceTree = "<group>"; };
 		16F3F686187864100073EB21 /* WebViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewTests.m; sourceTree = "<group>"; };
-		16F3F6931878685E0073EB21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		16F3F695187868690073EB21 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		16F3F6931878685E0073EB21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		16F3F695187868690073EB21 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		16F3F697187868950073EB21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		16F3F6DD1878701D0073EB21 /* BasicCoordinationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicCoordinationViewController.h; sourceTree = "<group>"; };
 		16F3F6DE1878701D0073EB21 /* BasicCoordinationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicCoordinationViewController.m; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 		16F3F662187864100073EB21 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				16D143511879323D007058C3 /* html */,
 				16F3F663187864100073EB21 /* WebView-Info.plist */,
 				16F3F667187864100073EB21 /* main.m */,
 				16F3F669187864100073EB21 /* WebView-Prefix.pch */,
@@ -244,6 +247,7 @@
 				16F3F698187868950073EB21 /* InfoPlist.strings in Resources */,
 				16F3F6921878685E0073EB21 /* Localizable.strings in Resources */,
 				16F3F66F187864100073EB21 /* Main.storyboard in Resources */,
+				16D143521879323D007058C3 /* html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,6 +479,7 @@
 				16F3F68C187864100073EB21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		16F3F68D187864100073EB21 /* Build configuration list for PBXNativeTarget "WebViewTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +488,7 @@
 				16F3F68F187864100073EB21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
