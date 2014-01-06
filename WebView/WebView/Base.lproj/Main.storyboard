@@ -36,21 +36,36 @@
         <!--Google Maps View Controller-->
         <scene sceneID="Vgb-U5-vKN">
             <objects>
-                <viewController id="9Gt-7K-fad" customClass="GoogleMapsViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="9Gt-7K-fad" customClass="GoogleMapsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hd1-am-kRy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" id="kfh-hO-aMo">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="122" width="320" height="389"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="m2c-AN-9YN">
+                                <rect key="frame" x="20" y="78" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="l3N-7S-y6f">
+                                <rect key="frame" x="20" y="527" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="VGR-hR-qse"/>
                     <connections>
+                        <outlet property="addressLabel" destination="l3N-7S-y6f" id="8Zq-Qp-WdE"/>
+                        <outlet property="textField" destination="m2c-AN-9YN" id="PN3-Xe-cr2"/>
                         <outlet property="webView" destination="kfh-hO-aMo" id="d03-Co-WJc"/>
                     </connections>
                 </viewController>

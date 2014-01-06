@@ -13,7 +13,13 @@
  */
 @interface GoogleMapsViewController : UIViewController
 
+/** 住所検索用のテキスト入力欄。 */
+@property (weak, nonatomic) IBOutlet UITextField* textField;
+
 /** Web ページ。 */
 @property (weak, nonatomic) IBOutlet UIWebView* webView;
+
+/** マップの中央座標を示す住所を表示するためのラベル。 */
+@property (weak, nonatomic) IBOutlet UILabel* addressLabel;
 
 @end

@@ -89,10 +89,8 @@
     NSString* url = [[request URL] absoluteString];
     if( [url hasPrefix:callbackProtocol] )
     {
-        NSString* message = [url substringFromIndex:[callbackProtocol length]];
-
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:LTEXT( @"From UIWebView" )
-                                                        message:message
+                                                        message:[url substringFromIndex:[callbackProtocol length]]
                                                        delegate:nil
                                               cancelButtonTitle:nil
                                               otherButtonTitles:@"OK", nil];
