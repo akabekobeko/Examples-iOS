@@ -83,14 +83,14 @@
  */
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
-    static NSString* const callbackProtocol = @"app-callback://";
+    static NSString* const callbackScheme = @"app-callback://";
     
     // アプリへのコールバックなら、その内容を表示
     NSString* url = [[request URL] absoluteString];
-    if( [url hasPrefix:callbackProtocol] )
+    if( [url hasPrefix:callbackScheme] )
     {
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:LTEXT( @"From UIWebView" )
-                                                        message:[url substringFromIndex:[callbackProtocol length]]
+                                                        message:[url substringFromIndex:[callbackScheme length]]
                                                        delegate:nil
                                               cancelButtonTitle:nil
                                               otherButtonTitles:@"OK", nil];

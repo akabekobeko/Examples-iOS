@@ -42,7 +42,7 @@
 {
     if( [textField.text length] > 0 )
     {
-        [self executeJavaScriptFunction:textField.text];
+        [self moveToMapCenter:textField.text];
     }
     
     [textField resignFirstResponder];
@@ -83,12 +83,20 @@
  */
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
-    static NSString* const callbackProtocol = @"app-callback://";
+    static NSString* const callbackScheme = @"app-callback://map?";
     
     // アプリへのコールバックなら、その内容を表示
     NSString* url = [[request URL] absoluteString];
-    if( [url hasPrefix:callbackProtocol] )
+    if( [url hasPrefix:callbackScheme] )
     {
+        // パラメータ解析
+        NSDictionary* params    = [self parseUrlParameters:url];
+        NSString*     address   = [params[ @"address" ] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSString*     latitude  = params[ @"lat" ];
+        NSString*     longitude = params[ @"lng" ];
+        DLOG( @"address = %@, latitude = %@, longitude = %@", address, latitude, longitude );
+
+        self.addressLabel.text = address;
         
         return NO;
     }
@@ -99,25 +107,53 @@
 #pragma mark - Private
 
 /**
- * UIWebView 上に読み込まれた JavaScript の関数を実行します。
- *
- * @param param JavaScript の関数へ指定するパラメータ。
- */
-- (void)executeJavaScriptFunction:(NSString *)param
-{
-    //NSString* script = [NSString stringWithFormat:@"window.webViewCallback('%@');", param];
-    //[self.webView stringByEvaluatingJavaScriptFromString:script];
-}
-
-/**
  * ローカル HTML を読み込みます。
  */
 - (void)loadHTML
 {
     NSString*     path    = [[NSBundle mainBundle] pathForResource:@"map" ofType:@"html" inDirectory:@"html"];
     NSURLRequest* request = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:path]];
-    
+
     [self.webView loadRequest:request];
+}
+
+/**
+ * マップの中央位置を指定された住所の位置へ移動させます。
+ *
+ * @param address 住所。ジオコーディングによって検索されます。
+ */
+- (void)moveToMapCenter:(NSString *)address
+{
+    NSString* region = LTEXT( @"Map Region" );
+    NSString* script = [NSString stringWithFormat:@"window.webViewCallbackSearchAddress('%@','%@');", address, region];
+    [self.webView stringByEvaluatingJavaScriptFromString:script];
+}
+
+/**
+ * URL におけるパラメータ部分を解析して取得します。
+ *
+ * @param url URL。
+ *
+ * @return 解析結果。
+ */
+- (NSDictionary *)parseUrlParameters:(NSString *)url
+{
+    NSRange range = [url rangeOfString:@"?"];
+    if( range.location == NSNotFound ) { [NSDictionary dictionary]; }
+
+    NSMutableDictionary* result = [NSMutableDictionary dictionary];
+    NSArray*             params = [[url substringFromIndex:range.location + 1] componentsSeparatedByString:@"&"];
+
+    for ( NSString* param in params )
+    {
+        NSArray* keyValuePair = [param componentsSeparatedByString:@"="];
+        if( [keyValuePair count] >= 2 )
+        {
+            [result setObject:keyValuePair[ 1 ] forKey:keyValuePair[ 0 ]];
+        }
+    }
+
+    return result;
 }
 
 @end
