@@ -91,7 +91,7 @@
     {
         // パラメータ解析
         NSDictionary* params    = [self parseUrlParameters:url];
-        NSString*     address   = [params[ @"address" ] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSString*     address   = params[ @"address" ];
         NSString*     latitude  = params[ @"lat" ];
         NSString*     longitude = params[ @"lng" ];
         DLOG( @"address = %@, latitude = %@, longitude = %@", address, latitude, longitude );
@@ -149,7 +149,8 @@
         NSArray* keyValuePair = [param componentsSeparatedByString:@"="];
         if( [keyValuePair count] >= 2 )
         {
-            [result setObject:keyValuePair[ 1 ] forKey:keyValuePair[ 0 ]];
+            NSString* value = [keyValuePair[ 1 ] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+            [result setObject:value forKey:keyValuePair[ 0 ]];
         }
     }
 
