@@ -23,18 +23,7 @@
  */
 + (id)controller
 {
-    return [[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] autorelease];
-}
-
-/**
- * インスタンスを破棄します。
- */
-- (void)dealloc
-{
-    self.fontSampleLabelPenna  = nil;
-    self.fontSampleLabelSeshat = nil;
-
-    [super dealloc];
+    return [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
 }
 
 #pragma mark - View
@@ -47,7 +36,6 @@
     [super viewDidLoad];
     
     [self setTitle:@"Embed Fonts"];
-    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Icon"]]];
     [self.fontSampleLabelPenna  setFont:[UIFont fontWithName:@"Penna"  size:20]];
     [self.fontSampleLabelSeshat setFont:[UIFont fontWithName:@"Seshat" size:20]];
 }
