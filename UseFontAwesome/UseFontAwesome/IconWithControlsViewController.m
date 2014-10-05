@@ -89,7 +89,7 @@
 - (void)setupBarButtons
 {
     UIFont*       font = [UIFont fontWithName:@"FontAwesome" size:18.0];
-    NSDictionary* dic  = [NSDictionary dictionaryWithObjectsAndKeys:font, UITextAttributeFont, nil];
+    NSDictionary* dic  = [NSDictionary dictionaryWithObjectsAndKeys:font, NSFontAttributeName, nil];
 
     // Black Opaque - Plain
     [self setupBarButton:self.barButtonItem1 textAttributes:dic icon:0xF001];
@@ -136,7 +136,7 @@
 - (void)setupSegmentControls
 {
     UIFont*       font = [UIFont fontWithName:@"FontAwesome" size:20.0];
-    NSDictionary* dic  = [NSDictionary dictionaryWithObjectsAndKeys:font, UITextAttributeFont, nil];
+    NSDictionary* dic  = [NSDictionary dictionaryWithObjectsAndKeys:font, NSFontAttributeName, nil];
     
     [self.segmentControl1 setTitleTextAttributes:dic forState:UIControlStateNormal];
     [self.segmentControl1 setTitle:[IconInfo stringWithUnicode:0xF04B] forSegmentAtIndex:0];
