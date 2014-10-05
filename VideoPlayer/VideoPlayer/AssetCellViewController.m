@@ -13,18 +13,6 @@
 
 @implementation AssetCellView
 
-/**
- * インスタンスを破棄します。
- */
-- (void)dealloc
-{
-    self.imageView = nil;
-    self.propertyView = nil;
-    self.durationLabel = nil;
-
-    [super dealloc];
-}
-
 @end
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -37,21 +25,10 @@
 @implementation AssetCellViewController
 
 /**
- * インスタンスを破棄します。
- */
-- (void)dealloc
-{
-    [_cell release];
-
-    [super dealloc];
-}
-
-/**
  * 画面が破棄されるときに発生します。
  */
 - (void)viewDidUnload
 {
-    [_cell release];
     _cell = nil;
 
     [super viewDidUnload];

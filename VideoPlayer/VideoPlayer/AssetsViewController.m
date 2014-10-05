@@ -12,10 +12,10 @@
 
 @interface AssetsViewController () <ABGridViewDelegate>
 
-@property (nonatomic, assign) id<AssetsViewControllerDelegate> delegate;      //! デリゲート
-@property (nonatomic, retain) ALAssetsLibrary*                 assetsLibrary; //! アセット情報ライブラリ
-@property (nonatomic, retain) ALAssetsGroup*                   assetsGroup;   //! アセットのグループ情報
-@property (nonatomic, retain) NSMutableArray*                  assets;        //! アセット情報のコレクション
+@property (nonatomic, weak) id<AssetsViewControllerDelegate> delegate;       //! デリゲート
+@property (nonatomic) ALAssetsLibrary*                       assetsLibrary;  //! アセット情報ライブラリ
+@property (nonatomic) ALAssetsGroup*                         assetsGroup;    //! アセットのグループ情報
+@property (nonatomic) NSMutableArray*                        assets;         //! アセット情報のコレクション
 
 @end
 
@@ -32,28 +32,13 @@
  */
 + (UIViewController *)controller:(id<AssetsViewControllerDelegate>)delegate
 {
-    AssetsViewController* contrller = [[[AssetsViewController alloc] initWithNibName:@"AssetsViewController" bundle:nil] autorelease];
+    AssetsViewController* contrller = [[AssetsViewController alloc] initWithNibName:@"AssetsViewController" bundle:nil];
     contrller.delegate = delegate;
     
-    UINavigationController* navi = [[[UINavigationController alloc] initWithRootViewController:contrller] autorelease];
+    UINavigationController* navi = [[UINavigationController alloc] initWithRootViewController:contrller];
     navi.navigationBar.barStyle = UIBarStyleBlackOpaque;
 
     return navi;
-}
-
-/**
- * インスタンスを破棄します。
- */
-
-- (void)dealloc
-{
-    self.delegate      = nil;
-    self.gridView      = nil;
-    self.assets        = nil;
-    self.assetsGroup   = nil;
-    self.assetsLibrary = nil;
-
-    [super dealloc];
 }
 
 #pragma mark - View
@@ -67,11 +52,11 @@
     
     self.title = @"Select Video";
 
-    self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel:)] autorelease];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector( cancel: )];
 
     self.gridView.delegate = self;
     self.gridView.itemSize = CGSizeMake( 100, 100 );
-    self.assetsLibrary     = [[[ALAssetsLibrary alloc] init] autorelease];
+    self.assetsLibrary     = [[ALAssetsLibrary alloc] init];
     [self performSelectorInBackground:@selector(loadAssetsGroups) withObject:nil];
 }
 
@@ -116,7 +101,7 @@
     AssetCellView* item = ( AssetCellView* )[gridView dequeueReusableItem];
     if( item == nil )
     {
-        AssetCellViewController* controller = [[[AssetCellViewController alloc] initWithNibName:@"AssetCellViewController" bundle:nil] autorelease];
+        AssetCellViewController* controller = [[AssetCellViewController alloc] initWithNibName:@"AssetCellViewController" bundle:nil];
         item = ( AssetCellView* )controller.view;
     }
 
@@ -158,7 +143,7 @@
  */
 - (void)cancel:(id)sender
 {
-    [self.navigationController dismissModalViewControllerAnimated:YES];
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
 /**

@@ -12,17 +12,6 @@
 @implementation AppDelegate
 
 /**
- * インスタンスを破棄します。
- */
-- (void)dealloc
-{
-    [_window               release];
-    [_navigationController release];
-
-    [super dealloc];
-}
-
-/**
  * アプリケーションが起動された時に発生します。
  *
  * @param application   アプリケーション。
@@ -33,10 +22,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     MenuViewController* menu = [MenuViewController controller];
-    self.navigationController = [[[UINavigationController alloc] initWithRootViewController:menu] autorelease];
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:menu];
     self.navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
     
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
 

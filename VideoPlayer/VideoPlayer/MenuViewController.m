@@ -39,17 +39,7 @@ typedef enum
  */
 + (MenuViewController *)controller
 {
-    return [[[MenuViewController alloc] initWithNibName:@"MenuViewController" bundle:nil] autorelease];
-}
-
-/**
- * インスタンスを破棄します。
- */
-- (void)dealloc
-{
-    self.menuTableView = nil;
-
-    [super dealloc];
+    return [[MenuViewController alloc] initWithNibName:@"MenuViewController" bundle:nil];
 }
 
 #pragma mark - View
@@ -118,7 +108,7 @@ typedef enum
     UITableViewCell* cell           = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if( cell == nil )
     {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
 
     switch( indexPath.row )
@@ -173,7 +163,7 @@ typedef enum
  */
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
-	[self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - AssetsViewControllerDelegate
@@ -186,7 +176,7 @@ typedef enum
  */
 - (void)selectAssetDidFinish:(AssetsViewController *)controller assetUrl:(NSURL *)assetUrl
 {
-    [self.navigationController dismissModalViewControllerAnimated:YES];
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 
     switch( self.videoMode )
     {
@@ -215,7 +205,7 @@ typedef enum
  */
 - (UIBarButtonItem *)backButton
 {
-    return [[[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil] autorelease];
+    return [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil];
 }
 
 /**
@@ -226,7 +216,7 @@ typedef enum
     self.videoMode = VideoModeMPMoviePlayer;
     
     UIViewController* dialog = [AssetsViewController controller:self];
-    [self.navigationController presentModalViewController:dialog animated:YES];
+    [self.navigationController presentViewController:dialog animated:YES completion:nil];
 }
 
 /**
@@ -237,7 +227,7 @@ typedef enum
     self.videoMode = VideoModeAVPlayer;
 
     UIViewController* dialog = [AssetsViewController controller:self];
-    [self.navigationController presentModalViewController:dialog animated:YES];
+    [self.navigationController presentViewController:dialog animated:YES completion:nil];
 }
 
 /**
@@ -266,12 +256,12 @@ typedef enum
         }
     }
 
-    NSString* message = ( savedCount == 0 ? @"Video file not found." : [NSString stringWithFormat:@"Saved the %d video files.", savedCount] );
-    UIAlertView* alert = [[[UIAlertView alloc] initWithTitle:@"Information"
-                                                     message:message
-                                                    delegate:nil
-                                           cancelButtonTitle:nil
-                                           otherButtonTitles:@"OK", nil] autorelease];
+    NSString* message = ( savedCount == 0 ? @"Video file not found." : [NSString stringWithFormat:@"Saved the %ld video files.", ( long )savedCount] );
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Information"
+                                                    message:message
+                                                   delegate:nil
+                                          cancelButtonTitle:nil
+                                          otherButtonTitles:@"OK", nil];
     [alert show];
 }
 

@@ -29,23 +29,10 @@
  */
 + (MoviePlayerViewController *)controller:(NSURL *)videoUrl
 {
-    MoviePlayerViewController* controller = [[[MoviePlayerViewController alloc] initWithNibName:@"MoviePlayerViewController" bundle:nil] autorelease];
+    MoviePlayerViewController* controller = [[MoviePlayerViewController alloc] initWithNibName:@"MoviePlayerViewController" bundle:nil];
     controller.videoUrl = videoUrl;
 
     return controller;
-}
-
-/**
- * インスタンスを破棄します。
- */
-- (void)dealloc
-{
-    [self.videoPlayer stop];
-    
-    self.videoPlayer = nil;
-    self.videoUrl    = nil;
-    
-    [super dealloc];
 }
 
 #pragma mark - View
@@ -59,7 +46,7 @@
     
     self.title = @"MPMoviePlayerController";
 
-    self.videoPlayer = [[[MPMoviePlayerController alloc] initWithContentURL:self.videoUrl] autorelease];
+    self.videoPlayer = [[MPMoviePlayerController alloc] initWithContentURL:self.videoUrl];
     self.videoPlayer.controlStyle             = MPMovieControlStyleDefault;
     self.videoPlayer.scalingMode              = MPMovieScalingModeAspectFit;
     self.videoPlayer.shouldAutoplay           = NO;

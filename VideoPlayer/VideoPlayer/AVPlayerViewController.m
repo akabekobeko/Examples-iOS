@@ -14,11 +14,11 @@ static void* AVPlayerViewControllerStatusObservationContext = &AVPlayerViewContr
 
 @interface AVPlayerViewController ()
 
-@property (nonatomic, retain) NSURL*        videoUrl;         //! 動画の URL
-@property (nonatomic, retain) AVPlayerItem* playerItem;       //! 再生対象となるアイテム情報
-@property (nonatomic, retain) AVPlayer*     videoPlayer;      //! 動画プレイヤー
-@property (nonatomic, assign) id            playTimeObserver; //! 再生位置の更新タイマー通知ハンドラ
-@property (nonatomic, assign) BOOL          isPlaying;        //! 動画が再生中であることを示す値
+@property (nonatomic) NSURL*        videoUrl;         //! 動画の URL
+@property (nonatomic) AVPlayerItem* playerItem;       //! 再生対象となるアイテム情報
+@property (nonatomic) AVPlayer*     videoPlayer;      //! 動画プレイヤー
+@property (nonatomic, weak) id      playTimeObserver; //! 再生位置の更新タイマー通知ハンドラ
+@property (nonatomic) BOOL          isPlaying;        //! 動画が再生中であることを示す値
 
 @end
 
@@ -35,32 +35,10 @@ static void* AVPlayerViewControllerStatusObservationContext = &AVPlayerViewContr
  */
 + (AVPlayerViewController *)controller:(NSURL *)videoUrl
 {
-    AVPlayerViewController* controller = [[[AVPlayerViewController alloc] initWithNibName:@"AVPlayerViewController" bundle:nil] autorelease];
+    AVPlayerViewController* controller = [[AVPlayerViewController alloc] initWithNibName:@"AVPlayerViewController" bundle:nil];
     controller.videoUrl = videoUrl;
 
     return controller;
-}
-
-/**
- * インスタンスを破棄します。
- */
-- (void)dealloc
-{
-    [self.videoPlayer pause];
-    [self.playerItem removeObserver:self forKeyPath:kStatusKey context:AVPlayerViewControllerStatusObservationContext];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:self.playerItem];
-
-    self.videoPlayerView  = nil;
-    self.videoPlayer      = nil;
-    self.videoUrl         = nil;
-    self.playerItem       = nil;
-    self.currentTimeLabel = nil;
-    self.seekBar          = nil;
-    self.durationLabel    = nil;
-    self.playButton       = nil;
-    self.playerToolView   = nil;
-
-    [super dealloc];
 }
 
 #pragma mark - View
@@ -81,7 +59,7 @@ static void* AVPlayerViewControllerStatusObservationContext = &AVPlayerViewContr
     self.playButton.enabled = NO;
     self.seekBar.enabled    = NO;
     
-    self.playerItem = [[[AVPlayerItem alloc] initWithURL:self.videoUrl] autorelease];
+    self.playerItem = [[AVPlayerItem alloc] initWithURL:self.videoUrl];
     [self.playerItem addObserver:self
                       forKeyPath:kStatusKey
                          options:NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew
@@ -93,19 +71,19 @@ static void* AVPlayerViewControllerStatusObservationContext = &AVPlayerViewContr
 												 name:AVPlayerItemDidPlayToEndTimeNotification
 											   object:self.playerItem];
   
-    self.videoPlayer = [[[AVPlayer alloc] initWithPlayerItem:self.playerItem] autorelease];
+    self.videoPlayer = [[AVPlayer alloc] initWithPlayerItem:self.playerItem];
     
     AVPlayerLayer* layer = ( AVPlayerLayer* )self.videoPlayerView.layer;
     layer.videoGravity = AVLayerVideoGravityResizeAspect;
     layer.player       = self.videoPlayer;
 
     // シングル タップ
-	UITapGestureRecognizer* tapSingle = [[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapSingle:)] autorelease];
+	UITapGestureRecognizer* tapSingle = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapSingle:)];
 	tapSingle.numberOfTapsRequired = 1;
 	[self.videoPlayerView addGestureRecognizer:tapSingle];
 
     // ダブル タップ
-	UITapGestureRecognizer* tapDouble = [[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapDouble:)] autorelease];
+	UITapGestureRecognizer* tapDouble = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapDouble:)];
 	tapDouble.numberOfTapsRequired = 2;
 	[self.videoPlayerView addGestureRecognizer:tapDouble];
 }
@@ -155,6 +133,10 @@ static void* AVPlayerViewControllerStatusObservationContext = &AVPlayerViewContr
  */
 - (void)viewWillDisappear:(BOOL)animated
 {
+    [self.videoPlayer pause];
+    [self.playerItem removeObserver:self forKeyPath:kStatusKey context:AVPlayerViewControllerStatusObservationContext];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:self.playerItem];
+
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque];
     [self.navigationController.navigationBar setBarStyle:UIBarStyleBlackOpaque];
     [self.navigationController.navigationBar setTranslucent:NO];
@@ -275,9 +257,13 @@ static void* AVPlayerViewControllerStatusObservationContext = &AVPlayerViewContr
 	// 再生時間とシークバー位置を連動させるためのタイマー
 	const double interval = ( 0.5f * self.seekBar.maximumValue ) / self.seekBar.bounds.size.width;
 	const CMTime time     = CMTimeMakeWithSeconds( interval, NSEC_PER_SEC );
+    
+    __weak typeof(self) weakSelf = self;
 	self.playTimeObserver = [self.videoPlayer addPeriodicTimeObserverForInterval:time
                                                                            queue:NULL
-                                                                      usingBlock:^( CMTime time ) { [self syncSeekBar]; }];
+                                                                      usingBlock:^( CMTime time ) {
+                                                                          [weakSelf syncSeekBar];
+                                                                      }];
 
     self.durationLabel.text = [self timeToString:self.seekBar.maximumValue];
 }
@@ -296,11 +282,11 @@ static void* AVPlayerViewControllerStatusObservationContext = &AVPlayerViewContr
     
     if( error != nil )
     {
-        UIAlertView* alertView = [[[UIAlertView alloc] initWithTitle:[error localizedDescription]
+        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:[error localizedDescription]
                                                             message:[error localizedFailureReason]
                                                            delegate:nil
                                                   cancelButtonTitle:@"OK"
-                                                  otherButtonTitles:nil] autorelease];
+                                                  otherButtonTitles:nil];
         [alertView show];
     }
 }
