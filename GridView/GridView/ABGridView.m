@@ -65,10 +65,10 @@
  */
 -(void)setup
 {
-    self.visibleItems  = [[[NSMutableSet alloc] init] autorelease];
-    self.recycledItems = [[[NSMutableSet alloc] init] autorelease];
+    self.visibleItems  = [[NSMutableSet alloc] init];
+    self.recycledItems = [[NSMutableSet alloc] init];
 	
-    self.scrollView = [[[UIScrollView alloc] initWithFrame:CGRectZero] autorelease];
+    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectZero];
     self.scrollView.showsVerticalScrollIndicator   = YES;
     self.scrollView.showsHorizontalScrollIndicator = NO;
     self.scrollView.bounces                        = YES;
@@ -77,21 +77,6 @@
 
     _itemSize         = CGSizeMake( 70, 70 );
     _minimumColumnGap = 5;
-}
-
-/**
- * インスタンスを破棄します。
- */
-- (void)dealloc
-{
-    [self.visibleItems  removeAllObjects];
-    [self.recycledItems removeAllObjects];
-    
-    self.scrollView    = nil;
-    self.visibleItems  = nil;
-    self.recycledItems = nil;
-
-    [super dealloc];
 }
 
 #pragma mark - Data
@@ -195,7 +180,7 @@
     {
         // UIImageView などがアイテムでもタップ検出するため、常にユーザー操作を許可する
         item.userInteractionEnabled = YES;
-		item.gestureRecognizers     = [NSArray arrayWithObjects:[[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapItem:)] autorelease], nil];
+		item.gestureRecognizers     = [NSArray arrayWithObjects:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector( tapItem: )], nil];
     }
     
     [item setNeedsDisplay]; // just in case
@@ -311,7 +296,7 @@
     UIView* result = [_recycledItems anyObject];
     if( result )
     {
-        [_recycledItems removeObject:[[result retain] autorelease]];
+        [_recycledItems removeObject:result];
     }
 
     return result;

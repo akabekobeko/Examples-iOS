@@ -14,25 +14,12 @@
 
 @interface AssetContentViewController () <ABGridViewDelegate>
 
-@property (nonatomic, retain) NSMutableArray*  assets;       //! AssetsLibrary 内のコンテンツ情報コレクション
+@property (nonatomic) NSMutableArray* assets; //! AssetsLibrary 内のコンテンツ情報コレクション
 
 @end
 
 @implementation AssetContentViewController
 
-#pragma mark - Lifecycle
-
-/**
- * インスタンスを破棄します。
- */
-- (void)dealloc
-{
-    [_assetGridView release];
-    [_assets        release];
-    [_group         release];
-    
-    [super dealloc];
-}
 
 #pragma mark - View controller
 
@@ -44,7 +31,7 @@
     [super viewDidLoad];
 
     self.title  = ( self.isViewModeUIImage ? @"UIImageView" : @"Original Cell" );
-    self.assets = [[[NSMutableArray alloc] initWithCapacity:self.group.numberOfAssets] autorelease];
+    self.assets = [[NSMutableArray alloc] initWithCapacity:self.group.numberOfAssets];
 
     self.assetGridView.delegate = self;
     self.assetGridView.minimumColumnGap = 4;
@@ -123,10 +110,10 @@
     UIImage* image  = [UIImage imageWithCGImage:[rep fullScreenImage] scale:[rep scale] orientation:( UIImageOrientation )[rep orientation]];
 
 	// 戻るボタン
-	UIBarButtonItem* back = [[[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil] autorelease];
+	UIBarButtonItem* back = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil];
 	self.navigationItem.backBarButtonItem = back;
 
-    PhotoViewController* controller = [[[PhotoViewController alloc] initWithNibName:@"PhotoViewController" bundle:nil] autorelease];
+    PhotoViewController* controller = [[PhotoViewController alloc] initWithNibName:@"PhotoViewController" bundle:nil];
     controller.image = image;
     
     [self.navigationController pushViewController:controller animated:YES];
@@ -186,7 +173,7 @@
     UIImageView* item = ( UIImageView* )[gridView dequeueReusableItem];
     if( item == nil )
     {
-        item = [[[UIImageView alloc] init] autorelease];
+        item = [[UIImageView alloc] init];
     }
     
     ALAsset* asset = [self.assets objectAtIndex:index];
@@ -208,7 +195,7 @@
     AssetCellView* item = ( AssetCellView* )[gridView dequeueReusableItem];
     if( item == nil )
     {
-        AssetCellViewController* controller = [[[AssetCellViewController alloc] initWithNibName:@"AssetCellViewController" bundle:nil] autorelease];
+        AssetCellViewController* controller = [[AssetCellViewController alloc] initWithNibName:@"AssetCellViewController" bundle:nil];
         item = ( AssetCellView* )controller.view;
         [self addViewShadow:item];
     }

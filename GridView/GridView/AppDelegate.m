@@ -12,17 +12,6 @@
 @implementation AppDelegate
 
 /**
- * メモリを開放します。
- */
-- (void)dealloc
-{
-	[_window               release];
-	[_navigationController release];
-
-	[super dealloc];
-}
-
-/**
  * アプリケーションが起動される時に発生します。
  *
  * @param application   アプリケーション情報。
@@ -32,12 +21,12 @@
  */
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-	MenuViewController* controller = [[[MenuViewController alloc] initWithNibName:@"MenuViewController" bundle:nil] autorelease];
+	MenuViewController* controller = [[MenuViewController alloc] initWithNibName:@"MenuViewController" bundle:nil];
 
-	self.navigationController = [[[UINavigationController alloc] initWithRootViewController:controller] autorelease];
+	self.navigationController = [[UINavigationController alloc] initWithRootViewController:controller];
 	self.navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
 	
-	self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	self.window.rootViewController = self.navigationController;
 	[self.window makeKeyAndVisible];
 	

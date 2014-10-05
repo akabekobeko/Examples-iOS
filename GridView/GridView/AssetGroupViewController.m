@@ -19,20 +19,6 @@
 
 @implementation AssetGroupViewController
 
-#pragma mark - Lifecycle
-
-/**
- * インスタンスを破棄します。
- */
-- (void)dealloc
-{
-	[_groupTableView release];
-	[_groups         release];
-	[_assetLibrary   release];
-
-	[super dealloc];
-}
-
 #pragma mark - View controller
 
 /**
@@ -46,8 +32,8 @@
 	self.groupTableView.dataSource = self;
 	self.groupTableView.delegate   = self;
 
-	self.assetLibrary = [[[ALAssetsLibrary alloc] init] autorelease];
-	self.groups       = [[[NSMutableArray alloc] init] autorelease];
+	self.assetLibrary = [[ALAssetsLibrary alloc] init];
+	self.groups       = [[NSMutableArray alloc] init];
 
 	// グループ一覧の列挙を非同期に実行
 	[self performSelectorInBackground:@selector(enumGroups) withObject:nil];
@@ -118,14 +104,14 @@
 	UITableViewCell* cell           = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	if( cell == nil )
 	{
-		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
 	}
 	
 	ALAssetsGroup* group = [self.groups objectAtIndex:indexPath.row];
 	NSString*      name  = [group valueForProperty:ALAssetsGroupPropertyName];
 	
 	cell.imageView.image = [UIImage imageWithCGImage:[group posterImage]];
-	cell.textLabel.text  = [NSString stringWithFormat:@"%@ (%d)", name, group.numberOfAssets];
+	cell.textLabel.text  = [NSString stringWithFormat:@"%@ (%ld)", name, (long)group.numberOfAssets];
 	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 	
 	return cell;
@@ -142,10 +128,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	// 戻るボタン
-	UIBarButtonItem* back = [[[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil] autorelease];
+	UIBarButtonItem* back = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil];
 	self.navigationItem.backBarButtonItem = back;
 	
-	AssetContentViewController* controller = [[[AssetContentViewController alloc] initWithNibName:@"AssetContentViewController" bundle:nil] autorelease];
+	AssetContentViewController* controller = [[AssetContentViewController alloc] initWithNibName:@"AssetContentViewController" bundle:nil];
 	controller.group             = [self.groups objectAtIndex:indexPath.row];
 	controller.isViewModeUIImage = self.isViewModeUIImage;
 

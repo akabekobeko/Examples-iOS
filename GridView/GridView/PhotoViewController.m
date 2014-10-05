@@ -15,17 +15,6 @@
 @implementation PhotoViewController
 
 /**
- * インスタンスを破棄します。
- */
-- (void)dealloc
-{
-    [_imageView release];
-    [_image release];
-
-    [super dealloc];
-}
-
-/**
  * 画面が読み込まれる時に発生します。
  */
 - (void)viewDidLoad
@@ -68,7 +57,7 @@
  */
 - (void)viewWillDisappear:(BOOL)animated
 {
-    [super viewDidDisappear:animated];
+    [super viewWillDisappear:animated];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque];
     self.navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
 }

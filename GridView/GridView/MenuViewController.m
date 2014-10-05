@@ -15,18 +15,6 @@
 
 @implementation MenuViewController
 
-#pragma mark - Lifecycle
-
-/**
- * インスタンスを破棄します。
- */
-- (void)dealloc
-{
-	[_menuTableView release];
-
-	[super dealloc];
-}
-
 #pragma mark - View controller
 
 /**
@@ -103,7 +91,7 @@
 	UITableViewCell* cell           = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	if( cell == nil )
 	{
-		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
 	}
 
 	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -130,10 +118,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	// 戻るボタン
-	UIBarButtonItem* back = [[[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil] autorelease];
+	UIBarButtonItem* back = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil];
 	self.navigationItem.backBarButtonItem = back;
 
-	AssetGroupViewController* controller = [[[AssetGroupViewController alloc] initWithNibName:@"AssetGroupViewController" bundle:nil] autorelease];
+	AssetGroupViewController* controller = [[AssetGroupViewController alloc] initWithNibName:@"AssetGroupViewController" bundle:nil];
 	controller.isViewModeUIImage = ( indexPath.row == 0 );
 
 	[self.navigationController pushViewController:controller animated:YES];
