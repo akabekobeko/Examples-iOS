@@ -7,21 +7,9 @@
 //
 
 #import "AppDelegate.h"
-
 #import "ViewController.h"
 
 @implementation AppDelegate
-
-/**
- * インスタンスを破棄します。
- */
-- (void)dealloc
-{
-    self.window               = nil;
-    self.navigationController = nil;
-    
-    [super dealloc];
-}
 
 /**
  * アプリケーションが起動される時に発生します。
@@ -33,8 +21,8 @@
  */
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-    self.navigationController = [[[UINavigationController alloc] initWithRootViewController:[ViewController controller]] autorelease];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:[ViewController controller]];
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     
     self.window.rootViewController = self.navigationController;
